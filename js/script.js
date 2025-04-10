@@ -1,48 +1,3 @@
-// Theme switching functionality
-document.addEventListener('DOMContentLoaded', () => {
-  const themeSwitcher = document.querySelector('.theme-switcher');
-  const lightIcon = document.querySelector('.light-icon');
-  const darkIcon = document.querySelector('.dark-icon');
-  
-  // Set dark theme by default
-  document.documentElement.setAttribute('data-theme', 'dark');
-  lightIcon.style.display = 'none';
-  darkIcon.style.display = 'block';
-  localStorage.setItem('theme', 'dark');
-
-  // Theme switcher click handler
-  themeSwitcher.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    
-    if (newTheme === 'dark') {
-      lightIcon.style.display = 'none';
-      darkIcon.style.display = 'block';
-    } else {
-      lightIcon.style.display = 'block';
-      darkIcon.style.display = 'none';
-    }
-  });
-
-  // Listen for system theme changes
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-    if (!localStorage.getItem('theme')) {  // Only auto-switch if user hasn't set a preference
-      const newTheme = e.matches ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', newTheme);
-      if (newTheme === 'dark') {
-        lightIcon.style.display = 'none';
-        darkIcon.style.display = 'block';
-      } else {
-        lightIcon.style.display = 'block';
-        darkIcon.style.display = 'none';
-      }
-    }
-  });
-});
-
 // Mobile menu functionality
 document.addEventListener('DOMContentLoaded', function() {
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -72,35 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
       dropdownItems.forEach(item => item.classList.remove('active'));
     }
   });
-
-  // Theme switcher functionality
-  const themeSwitcher = document.querySelector('.theme-switcher');
-  const lightIcon = document.querySelector('.light-icon');
-  const darkIcon = document.querySelector('.dark-icon');
-
-  // Check for saved theme preference
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  document.documentElement.setAttribute('data-theme', savedTheme);
-  updateThemeIcons(savedTheme);
-
-  themeSwitcher.addEventListener('click', function() {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateThemeIcons(newTheme);
-  });
-
-  function updateThemeIcons(theme) {
-    if (theme === 'light') {
-      lightIcon.style.display = 'block';
-      darkIcon.style.display = 'none';
-    } else {
-      lightIcon.style.display = 'none';
-      darkIcon.style.display = 'block';
-    }
-  }
 });
 
 // Smooth scrolling for anchor links
