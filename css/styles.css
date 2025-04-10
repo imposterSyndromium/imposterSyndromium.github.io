@@ -20,6 +20,7 @@
   --hover-color: #e5e7eb;
   --gradient-start: #4a148c;
   --gradient-end: #311b92;
+  --hover-line-color: #ff69b4;
 }
 
 /* Dark Theme Variables */
@@ -261,7 +262,7 @@ body {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+  background: linear-gradient(to right, transparent, var(--hover-line-color), transparent);
   opacity: 0;
   transition: var(--transition);
 }
@@ -571,4 +572,25 @@ footer {
   .story-details ul, .award-details ul, .project-card ul {
     margin-left: 1rem;
   }
+}
+
+/* Site Message Styles */
+.site-message {
+    display: none;
+    background-color: #ffd700;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    font-weight: 500;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.site-message::before {
+    content: "⚠️";
+    margin-right: 8px;
 }
