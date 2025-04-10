@@ -567,33 +567,29 @@ footer {
   }
 }
 
-/* Site Message Styles */
+/* Site Message Banner */
 .site-message {
-    display: block;
-    padding: 1rem;
-    background-color: #5d27ae; /* Explicit purple color */
-    color: #ffffff; /* Explicit white text */
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999; /* Increased z-index to ensure it's above everything */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    font-weight: 500;
-    font-size: 1.1rem;
-    line-height: 1.5;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: none;
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .site-message[data-theme="dark"] {
-    background-color: #5d27ae;
-    color: #ffffff;
+  background-color: var(--primary-color);
+  color: white;
 }
 
 .site-message[data-theme="light"] {
-    background-color: #5d27ae;
-    color: #ffffff;
+  background-color: var(--primary-color);
+  color: white;
 }
