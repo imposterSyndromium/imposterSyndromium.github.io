@@ -19,9 +19,10 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --blur: blur(20px);
   --hover-color: #e5e7eb;
-  --gradient-start: #4a148c;
-  --gradient-end: #311b92;
+  --gradient-start: #6a1b9a;
+  --gradient-end: #4527a0;
   --hover-line-color: #ff69b4;
+  --card-glow: 0 0 30px rgba(106, 27, 154, 0.4);
 }
 
 /* Dark Theme Variables */
@@ -35,8 +36,9 @@
   --nav-bg: rgba(0, 0, 0, 0.8);
   --footer-bg: #1d1d1f;
   --hover-color: #4b5563;
-  --gradient-start: #311b92;
-  --gradient-end: #1a237e;
+  --gradient-start: #4527a0;
+  --gradient-end: #311b92;
+  --card-glow: 0 0 30px rgba(69, 39, 160, 0.5);
 }
 
 /* Base Styles */
@@ -114,21 +116,40 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--text-color);
-  letter-spacing: -0.5px;
-}
-
+/* Logo Styles */
 .logo a {
   color: inherit;
   text-decoration: none;
-  display: block;
+  display: flex;
+  align-items: center;
   transition: none;
+}
+
+.logo-img {
+  height: 80px;
+  width: auto;
+  margin-right: 15px;
+  border-radius: 6px;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+/* Responsive Logo */
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 1.4rem;
+  }
+  
+  .logo-img {
+    height: 60px;
+  }
 }
 
 .nav-links {
@@ -172,7 +193,7 @@ body {
 
 /* Hero Section */
 .hero {
-  padding: 12rem 0 6rem;
+  padding: 14rem 0 6rem;
   background: linear-gradient(to bottom, var(--background), var(--card-bg));
   text-align: center;
   position: relative;
@@ -249,43 +270,59 @@ body {
 
 .card, .product-card, .download-card, .update-card, .support-card {
   background-color: var(--card-bg);
-  padding: 2.5rem;
-  border-radius: 18px;
-  transition: var(--transition);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
 }
 
-.card::before, .product-card::before, .download-card::before, .update-card::before, .support-card::before {
+.card::after, .product-card::after, .download-card::after, .update-card::after, .support-card::after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--hover-line-color), transparent);
+  bottom: 0;
+  border-radius: 12px;
+  background: radial-gradient(circle at center, rgba(106, 27, 154, 0.1) 0%, transparent 70%);
   opacity: 0;
-  transition: var(--transition);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
 }
 
-.card:hover::before, .product-card:hover::before, .download-card:hover::before, .update-card:hover::before, .support-card:hover::before {
+[data-theme="dark"] .card::after, [data-theme="dark"] .product-card::after, [data-theme="dark"] .download-card::after, [data-theme="dark"] .update-card::after, [data-theme="dark"] .support-card::after {
+  background: radial-gradient(circle at center, rgba(69, 39, 160, 0.15) 0%, transparent 70%);
+}
+
+.card:hover::after, .product-card:hover::after, .download-card:hover::after, .update-card:hover::after, .support-card:hover::after {
   opacity: 1;
 }
 
 .card:hover, .product-card:hover, .download-card:hover, .update-card:hover, .support-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--card-glow);
 }
 
 [data-theme="dark"] .card:hover, [data-theme="dark"] .product-card:hover, [data-theme="dark"] .download-card:hover, [data-theme="dark"] .update-card:hover, [data-theme="dark"] .support-card:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--card-glow);
 }
 
 .card h3, .product-card h3, .download-card h3, .update-card h3, .support-card h3 {
-  color: var(--text-color);
+  position: relative;
+  z-index: 2;
   margin-bottom: 1rem;
-  font-weight: 600;
   font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card p, .product-card p, .download-card p, .update-card p, .support-card p {
+  position: relative;
+  z-index: 2;
+  color: var(--light-text);
 }
 
 /* Footer */
@@ -578,20 +615,24 @@ footer {
 /* Site Message Styles */
 .site-message {
     display: none;
-    background-color: #ffd700;
-    color: #000;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
-    padding: 10px;
-    font-weight: 500;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.site-message::before {
-    content: "⚠️";
-    margin-right: 8px;
+.site-message[data-theme="dark"] {
+    background-color: var(--dark-primary);
+    color: var(--dark-text);
+}
+
+.site-message[data-theme="light"] {
+    background-color: var(--light-primary);
+    color: var(--light-text);
 }

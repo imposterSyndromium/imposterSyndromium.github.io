@@ -17,17 +17,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add the message container to the top of the body
     document.body.insertBefore(messageContainer, document.body.firstChild);
     
+    // Get the current theme
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    messageContainer.setAttribute('data-theme', currentTheme);
+    
     // Fetch the message from the text file
-    fetch('../../data/site-message.txt')
+    fetch('/data/site-message.txt')
         .then(response => {
-            console.log('Fetch response:', response);
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error('Failed to load site message');
             }
             return response.text();
         })
         .then(text => {
-            console.log('Fetched text:', text);
             // Trim the text to remove any whitespace
             const trimmedText = text.trim();
             
