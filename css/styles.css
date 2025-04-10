@@ -8,16 +8,16 @@
 
 /* Variables - Dark Theme (Default) */
 :root {
-  --primary-color: #2997ff;
-  --secondary-color: #0071e3;
+  --primary-color: #5d27ae;
+  --secondary-color: #8f6ad3;
   --text-color: #f5f5f7;
   --light-text: #86868b;
   --background: #000000;
   --card-bg: #1d1d1f;
-  --nav-bg: rgba(0, 0, 0, 0.8);
+  --nav-bg: var(--card-bg);
   --footer-bg: #1d1d1f;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --blur: blur(20px);
+  --blur: blur(70px) saturate(180%);
   --hover-color: #4b5563;
   --gradient-start: #4527a0;
   --gradient-end: #311b92;
@@ -48,15 +48,19 @@ body {
 
 /* Navigation */
 .main-nav {
-  background-color: var(--nav-bg);
-  backdrop-filter: var(--blur);
-  -webkit-backdrop-filter: var(--blur);
+  background-color: #000000; /* Solid black background */
   position: fixed;
   width: 100%;
-  top: 0;
-  z-index: 1000;
+  top: 3.5rem; /* Space for site message */
+  z-index: 1001;
   transition: var(--transition);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Remove all transparency effects */
+.main-nav::before {
+  display: none;
 }
 
 [data-theme="dark"] .main-nav {
@@ -144,7 +148,7 @@ body {
 
 /* Hero Section */
 .hero {
-  padding: 14rem 0 6rem;
+  padding: 18rem 0 6rem;
   background: linear-gradient(to bottom, var(--background), var(--card-bg));
   text-align: center;
   position: relative;
@@ -334,9 +338,9 @@ footer {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: var(--nav-bg);
-    backdrop-filter: var(--blur);
-    -webkit-backdrop-filter: var(--blur);
+    background-color: #000000;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     flex-direction: column;
     padding: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -397,9 +401,9 @@ footer {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--nav-bg);
-  backdrop-filter: var(--blur);
-  -webkit-backdrop-filter: var(--blur);
+  background-color: #000000;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   min-width: 200px;
   padding: 0.5rem 0;
   border-radius: 8px;
@@ -565,7 +569,7 @@ footer {
 
 /* Site Message Styles */
 .site-message {
-    display: none;
+    display: block;
     padding: 1rem;
     background-color: var(--primary-color);
     color: var(--text-color);
@@ -576,14 +580,15 @@ footer {
     right: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
 }
 
 .site-message[data-theme="dark"] {
-    background-color: var(--dark-primary);
-    color: var(--dark-text);
+    background-color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .site-message[data-theme="light"] {
-    background-color: var(--light-primary);
-    color: var(--light-text);
+    background-color: var(--primary-color);
+    color: var(--text-color);
 }

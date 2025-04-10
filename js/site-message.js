@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     messageContainer.setAttribute('data-theme', currentTheme);
     
     // Fetch the message from the text file
-    fetch('/data/site-message.txt')
+    fetch('data/site-message.txt')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Failed to load site message');
