@@ -571,8 +571,8 @@ footer {
 .site-message {
     display: block;
     padding: 1rem;
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    background-color: #5d27ae; /* Explicit purple color */
+    color: #ffffff; /* Explicit white text */
     text-align: center;
     position: fixed;
     top: 0;
@@ -581,14 +581,16 @@ footer {
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.5;
 }
 
 .site-message[data-theme="dark"] {
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    background-color: #5d27ae;
+    color: #ffffff;
 }
 
 .site-message[data-theme="light"] {
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    background-color: #5d27ae;
+    color: #ffffff;
 }
