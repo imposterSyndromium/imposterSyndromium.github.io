@@ -7,9 +7,27 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Get the current script's path
+    const scripts = document.getElementsByTagName('script');
+    const currentScript = Array.from(scripts).find(script => script.src.includes('header-include.js'));
+    const scriptPath = currentScript ? currentScript.src : '';
+    
+    // Calculate the correct path to the components directory
+    let headerPath = '/components/header.html';
+    if (scriptPath.includes('/pages/')) {
+        // If we're in a subdirectory, adjust the path
+        const depth = (scriptPath.match(/\/pages\//g) || []).length;
+        headerPath = '../'.repeat(depth) + 'components/header.html';
+    }
+    
     // Include header component
-    fetch('../components/header.html')
-        .then(response => response.text())
+    fetch(headerPath)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to load header');
+            }
+            return response.text();
+        })
         .then(data => {
             document.body.insertAdjacentHTML('afterbegin', data);
             
@@ -29,7 +47,7 @@ function initializeSiteMessage() {
     const scriptPath = currentScript ? currentScript.src : '';
     
     // Calculate the correct path to the data directory
-    let dataPath = '../data/site-message.txt';
+    let dataPath = '/data/site-message.txt';
     if (scriptPath.includes('/pages/')) {
         // If we're in a subdirectory, adjust the path
         const depth = (scriptPath.match(/\/pages\//g) || []).length;
@@ -57,7 +75,10 @@ function initializeSiteMessage() {
         })
         .catch(error => {
             console.error('Error loading site message:', error);
-            document.getElementById('site-message').style.display = 'none';
+            const messageContainer = document.getElementById('site-message');
+            if (messageContainer) {
+                messageContainer.style.display = 'none';
+            }
         });
 }
 

@@ -48,11 +48,11 @@ body {
 
 /* Navigation */
 .main-nav {
-  background-color: #000000; /* Solid black background */
+  background-color: #000000;
   position: fixed;
   width: 100%;
   top: 3.5rem; /* Space for site message */
-  z-index: 1000; /* Lower than site message */
+  z-index: 1000;
   transition: var(--transition);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
