@@ -20,13 +20,48 @@
   <header>
     <nav class="main-nav">
       <div class="container">
-        <div class="logo">ImposterSyndromium</div>
+        <div class="logo"><a href="index.html">ImposterSyndromium 2.0</a></div>
         <ul class="nav-links">
-          <li class="nav-item"><a href="#highlights">Highlights</a></li>
-          <li class="nav-item"><a href="#products">Products</a></li>
-          <li class="nav-item"><a href="#downloads">Downloads</a></li>
-          <li class="nav-item"><a href="#updates">Updates</a></li>
-          <li class="nav-item"><a href="#support">Support</a></li>
+          <li class="nav-item dropdown">
+            <a href="#highlights">Highlights</a>
+            <ul class="dropdown-menu">
+              <li><a href="pages/highlights/featured-projects.html">Featured Projects</a></li>
+              <li><a href="pages/highlights/success-stories.html">Success Stories</a></li>
+              <li><a href="pages/highlights/awards.html">Awards</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#products">Products</a>
+            <ul class="dropdown-menu">
+              <li><a href="pages/products/software-solutions.html">Software Solutions</a></li>
+              <li><a href="pages/products/hardware-products.html">Hardware Products</a></li>
+              <li><a href="pages/products/professional-services.html">Professional Services</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#downloads">Downloads</a>
+            <ul class="dropdown-menu">
+              <li><a href="pages/downloads/mobile-apps.html">Mobile Apps</a></li>
+              <li><a href="pages/downloads/desktop-software.html">Desktop Software</a></li>
+              <li><a href="pages/downloads/resources.html">Resources</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#updates">Updates</a>
+            <ul class="dropdown-menu">
+              <li><a href="pages/updates/blog.html">Blog</a></li>
+              <li><a href="pages/updates/news.html">News</a></li>
+              <li><a href="pages/updates/product-roadmap.html">Product Roadmap</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#support">Support</a>
+            <ul class="dropdown-menu">
+              <li><a href="pages/support/documentation.html">Documentation</a></li>
+              <li><a href="pages/support/faq.html">FAQ</a></li>
+              <li><a href="pages/support/contact.html">Contact Us</a></li>
+            </ul>
+          </li>
         </ul>
         <button class="mobile-menu-btn">☰</button>
       </div>
@@ -36,8 +71,8 @@
   <main>
     <section class="hero">
       <div class="container">
-        <h1>Welcome to the future of technology</h1>
-        <p>Discover innovative solutions that transform the way you work and live. Experience the power of cutting-edge technology designed for tomorrow.</p>
+        <h1>The future is always ahead of you.  The past is always behind you.  The present is what is right here, right now...</h1>
+        <p>Innovation, Kaizen mind, curiosity,and a passion for excellence. This team is dedicated to providing the best possible solutions for the problem at hand.</p>
         <a href="#products" class="cta-button">Explore our products</a>
       </div>
     </section>
@@ -46,15 +81,15 @@
       <div class="container">
         <h2>Highlights</h2>
         <div class="card-grid">
-          <div class="card">
+          <div class="card" onclick="window.location.href='pages/highlights/featured-projects.html'">
             <h3>Featured Projects</h3>
             <p>Discover our most innovative solutions that are changing industries and pushing boundaries.</p>
           </div>
-          <div class="card">
+          <div class="card" onclick="window.location.href='pages/highlights/success-stories.html'">
             <h3>Success Stories</h3>
             <p>Read how our clients are achieving remarkable results with our cutting-edge technology.</p>
           </div>
-          <div class="card">
+          <div class="card" onclick="window.location.href='pages/highlights/awards.html'">
             <h3>Awards</h3>
             <p>Recognized for excellence in innovation and technological advancement.</p>
           </div>
@@ -66,15 +101,15 @@
       <div class="container">
         <h2>Our Products</h2>
         <div class="product-grid">
-          <div class="product-card">
+          <div class="product-card" onclick="window.location.href='pages/products/software-solutions.html'">
             <h3>Software Solutions</h3>
             <p>Powerful software designed to streamline your workflow and boost productivity.</p>
           </div>
-          <div class="product-card">
+          <div class="product-card" onclick="window.location.href='pages/products/hardware-products.html'">
             <h3>Hardware Products</h3>
             <p>State-of-the-art hardware solutions built for performance and reliability.</p>
           </div>
-          <div class="product-card">
+          <div class="product-card" onclick="window.location.href='pages/products/professional-services.html'">
             <h3>Professional Services</h3>
             <p>Expert consulting and implementation services to help you succeed.</p>
           </div>
@@ -86,15 +121,15 @@
       <div class="container">
         <h2>Downloads</h2>
         <div class="download-grid">
-          <div class="download-card">
+          <div class="download-card" onclick="window.location.href='pages/downloads/mobile-apps.html'">
             <h3>Mobile Apps</h3>
-            <p>Download our mobile applications for iOS and Android devices.</p>
+            <p>Download mobile applications for iOS</p>
           </div>
-          <div class="download-card">
+          <div class="download-card" onclick="window.location.href='pages/downloads/desktop-software.html'">
             <h3>Desktop Software</h3>
             <p>Powerful desktop applications for your business needs.</p>
           </div>
-          <div class="download-card">
+          <div class="download-card" onclick="window.location.href='pages/downloads/resources.html'">
             <h3>Resources</h3>
             <p>Access our comprehensive resource library and documentation.</p>
           </div>
@@ -106,15 +141,15 @@
       <div class="container">
         <h2>Latest Updates</h2>
         <div class="update-grid">
-          <div class="update-card">
+          <div class="update-card" onclick="window.location.href='pages/updates/blog.html'">
             <h3>Blog</h3>
             <p>Stay informed with our latest insights and articles about technology trends.</p>
           </div>
-          <div class="update-card">
+          <div class="update-card" onclick="window.location.href='pages/updates/news.html'">
             <h3>News</h3>
             <p>Company news and announcements about our latest developments.</p>
           </div>
-          <div class="update-card">
+          <div class="update-card" onclick="window.location.href='pages/updates/product-roadmap.html'">
             <h3>Product Roadmap</h3>
             <p>See what's coming next in our product lineup and future plans.</p>
           </div>
@@ -126,15 +161,15 @@
       <div class="container">
         <h2>Support</h2>
         <div class="support-grid">
-          <div class="support-card">
+          <div class="support-card" onclick="window.location.href='pages/support/documentation.html'">
             <h3>Documentation</h3>
             <p>Comprehensive guides and manuals to help you get started.</p>
           </div>
-          <div class="support-card">
+          <div class="support-card" onclick="window.location.href='pages/support/faq.html'">
             <h3>FAQ</h3>
             <p>Answers to common questions about our products and services.</p>
           </div>
-          <div class="support-card">
+          <div class="support-card" onclick="window.location.href='pages/support/contact.html'">
             <h3>Contact Us</h3>
             <p>Get in touch with our support team for assistance.</p>
           </div>
@@ -148,7 +183,7 @@
       <div class="footer-content">
         <div class="footer-section">
           <h3>ImposterSyndromium</h3>
-          <p>Innovating the future, one solution at a time.</p>
+          <p>You never stop changing who you are.  Building your future, one solution at a time.</p>
         </div>
         <div class="footer-section">
           <h3>Contact</h3>

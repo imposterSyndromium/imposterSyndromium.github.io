@@ -17,6 +17,9 @@
   --footer-bg: #f5f5f7;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --blur: blur(20px);
+  --hover-color: #e5e7eb;
+  --gradient-start: #4a148c;
+  --gradient-end: #311b92;
 }
 
 /* Dark Theme Variables */
@@ -29,6 +32,9 @@
   --card-bg: #1d1d1f;
   --nav-bg: rgba(0, 0, 0, 0.8);
   --footer-bg: #1d1d1f;
+  --hover-color: #4b5563;
+  --gradient-start: #311b92;
+  --gradient-end: #1a237e;
 }
 
 /* Base Styles */
@@ -116,6 +122,13 @@ body {
   letter-spacing: -0.5px;
 }
 
+.logo a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  transition: none;
+}
+
 .nav-links {
   display: flex;
   list-style: none;
@@ -138,7 +151,7 @@ body {
   left: 0;
   width: 0;
   height: 1px;
-  background-color: var(--primary-color);
+  background-color: var(--text-color);
   transition: var(--transition);
 }
 
@@ -307,7 +320,8 @@ footer {
 }
 
 .social-links a:hover {
-  color: var(--primary-color);
+  color: var(--text-color);
+  opacity: 0.8;
 }
 
 .footer-bottom {
@@ -382,4 +396,179 @@ footer {
 
 .section {
   animation: fadeIn 0.6s ease-out;
+}
+
+/* Navigation styles */
+.nav-item.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--nav-bg);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  min-width: 200px;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: var(--transition);
+  list-style: none;
+  margin: 0;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--hover-color);
+}
+
+/* Story Card Styles */
+.story-card {
+  background-color: var(--card-background);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.story-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.story-highlight {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.story-details {
+  margin-top: 1rem;
+}
+
+.story-details ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Award Card Styles */
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.award-card {
+  background-color: var(--card-background);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.award-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.award-org {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+
+.award-details {
+  margin-top: 1rem;
+}
+
+.award-details ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Project Card Styles */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: var(--card-background);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.project-card ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Content Section Styles */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+  
+  .story-card, .award-card, .project-card {
+    padding: 1rem;
+  }
+  
+  .story-details ul, .award-details ul, .project-card ul {
+    margin-left: 1rem;
+  }
 }
