@@ -51,7 +51,7 @@ body {
   background-color: #000000;
   position: fixed;
   width: 100%;
-  top: 44px; /* Height of the site message banner */
+  top: 44px; /* Exactly match site-message height */
   z-index: 1000;
   transition: var(--transition);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -71,7 +71,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 1rem;
+  padding: 1rem;
+  height: 100px; /* Fixed height for the navigation */
 }
 
 /* Logo Styles */
@@ -148,7 +149,8 @@ body {
 
 /* Hero Section */
 .hero {
-  padding: 12rem 0 6rem; /* Reduced top padding to account for the header + banner */
+  padding-top: calc(144px + 4rem); /* nav height (100px) + banner height (44px) + extra padding */
+  padding-bottom: 6rem;
   background: linear-gradient(to bottom, var(--background), var(--card-bg));
   text-align: center;
   position: relative;
@@ -578,10 +580,11 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   font-weight: 500;
-  display: block; /* Changed from 'none' to 'block' to ensure visibility */
+  display: block;
   background-color: var(--primary-color);
   color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 44px; /* Fixed height for calculations */
 }
 
 .site-message[data-theme="dark"] {
