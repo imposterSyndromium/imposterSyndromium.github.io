@@ -51,7 +51,7 @@ body {
   background-color: #000000;
   position: fixed;
   width: 100%;
-  top: 3.5rem; /* Space for site message */
+  top: 0;
   z-index: 1000;
   transition: var(--transition);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
