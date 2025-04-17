@@ -51,7 +51,7 @@ body {
   background-color: #000000;
   position: fixed;
   width: 100%;
-  top: 0;
+  top: 44px; /* Height of the site message banner */
   z-index: 1000;
   transition: var(--transition);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -148,7 +148,7 @@ body {
 
 /* Hero Section */
 .hero {
-  padding: 18rem 0 6rem;
+  padding: 12rem 0 6rem; /* Reduced top padding to account for the header + banner */
   background: linear-gradient(to bottom, var(--background), var(--card-bg));
   text-align: center;
   position: relative;
@@ -578,7 +578,7 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   font-weight: 500;
-  display: none;
+  display: block; /* Changed from 'none' to 'block' to ensure visibility */
   background-color: var(--primary-color);
   color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
