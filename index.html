@@ -6,11 +6,11 @@
   <!-- Responsive viewport settings for mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- SEO meta description -->
-  <meta name="description" content="ImposterSyndromium - Leading provider of innovative software and hardware solutions">
+  <meta name="description" content="About Robin O'Brien - Software Developer, Technology Enthusiast, and Creative Problem Solver">
   <!-- SEO meta keywords -->
-  <meta name="keywords" content="software solutions, hardware products, professional services, technology innovation">
+  <meta name="keywords" content="robin obrien, software developer, web developer, portfolio, about me, technology, programming">
   <!-- Page title -->
-  <title>ImposterSyndromium - Innovation at its finest</title>
+  <title>Robin O'Brien - About Me</title>
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
   <!-- Google Fonts - Inter font family -->
@@ -27,126 +27,132 @@
       <div class="container">
         <h1>Make change. Be swift. Think different.</h1>
         <p>The future is always ahead of you. The past is always behind you. The present is what is right here, right now...</p>
-        <p>Innovation, Kaizen mind, curiosity, and a passion for technology. This team is dedicated to providing the best possible solutions for the problems you need solved.</p>
-        <!-- Call-to-action button linking to products section -->
-        <a href="#products" class="cta-button" role="button">Explore our products</a>
+        <p>Innovation, Kaizen mind, curiosity, and a passion for technology. I'm dedicated to providing the best possible solutions for the problems you need solved.</p>
+        <!-- Call-to-action button linking to about section -->
+        <a href="#about" class="cta-button" role="button">Learn more about me</a>
       </div>
     </section>
 
-    <!-- Highlights Section: Featured projects, success stories, and awards -->
-    <section id="highlights" class="section" aria-label="Highlights section">
+    <!-- About Section: Personal introduction and background -->
+    <section id="about" class="section" aria-label="About section">
       <div class="container">
-        <h2>Highlights</h2>
+        <h2>About Me</h2>
         <div class="card-grid">
-          <!-- Featured Projects Card: Navigate to featured projects page on click or Enter key -->
+          <!-- Professional Summary Card -->
+          <div class="card" style="grid-column: 1 / -1; max-width: 100%;">
+            <h3>IT Specialist & Application Developer</h3>
+            <p>Experienced IT Specialist with over a decade of comprehensive technology support in manufacturing environments. Application developer with expertise in VB.NET, database management, and industrial automation systems. Proven track record of independently designing and implementing custom applications, automated reporting systems, and KPI dashboards that improve operational efficiency and decision-making.</p>
+            <p style="margin-top: 1rem; color: var(--secondary-color);"><strong>Current Position:</strong> IT Specialist at Toyota Boshoku (2012 - Present, 13+ years)</p>
+          </div>
+          <!-- Skills Card: Navigate to skills/experience page -->
           <div class="card" role="button" tabindex="0" onclick="window.location.href='pages/highlights/featured-projects.html'" onkeydown="if(event.key === 'Enter') window.location.href='pages/highlights/featured-projects.html'">
-            <h3>Featured Projects</h3>
-            <p>Discover our most innovative solutions that are changing industries and pushing boundaries.</p>
+            <h3>Skills & Experience</h3>
+            <p>VB.NET, Swift & SwiftUI, SQL Server, PLC Integration, Windows/macOS/Linux Administration, SSRS Development, Cybersecurity, and more.</p>
           </div>
-          <!-- Success Stories Card: Navigate to success stories page on click or Enter key -->
+          <!-- Projects Card: Navigate to projects page -->
           <div class="card" role="button" tabindex="0" onclick="window.location.href='pages/highlights/success-stories.html'" onkeydown="if(event.key === 'Enter') window.location.href='pages/highlights/success-stories.html'">
-            <h3>Success Stories</h3>
-            <p>Read how our clients are achieving remarkable results with our cutting-edge technology.</p>
+            <h3>Key Projects</h3>
+            <p>KPI tracking systems, Health & Safety applications, PLC integration solutions, automated reporting, and production data processing systems.</p>
           </div>
-          <!-- Awards Card: Navigate to awards page on click or Enter key -->
+          <!-- Education Card: Navigate to education/achievements page -->
           <div class="card" role="button" tabindex="0" onclick="window.location.href='pages/highlights/awards.html'" onkeydown="if(event.key === 'Enter') window.location.href='pages/highlights/awards.html'">
-            <h3>Awards</h3>
-            <p>Recognized for excellence in innovation and technological advancement.</p>
+            <h3>Education & Development</h3>
+            <p>Network Engineering & System Administration (Conestoga College). Currently pursuing Swift/SwiftUI and Ignition Platform certification.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Products Section: Software, hardware, and professional services -->
-    <section id="products" class="section">
+    <!-- Projects Section: Portfolio and featured work -->
+    <section id="projects" class="section">
       <div class="container">
-        <h2>Our Products</h2>
+        <h2>Featured Projects</h2>
         <div class="product-grid">
-          <!-- Software Solutions Card: Navigate to software solutions page -->
-          <div class="product-card" onclick="window.location.href='pages/products/software-solutions.html'">
-            <h3>Software Solutions</h3>
-            <p>Powerful software designed to streamline your workflow and boost productivity.</p>
+          <!-- Custom Applications Card: Navigate to projects page -->
+          <div class="product-card" onclick="window.location.href='pages/highlights/success-stories.html'">
+            <h3>Custom Business Applications</h3>
+            <p>VB.NET applications including KPI dashboards, Health & Safety reporting, HR kiosk interfaces, and inventory tracking systems.</p>
           </div>
-          <!-- Hardware Products Card: Navigate to hardware products page -->
+          <!-- Industrial Integration Card: Navigate to industrial projects page -->
           <div class="product-card" onclick="window.location.href='pages/products/hardware-products.html'">
-            <h3>Hardware Products</h3>
-            <p>State-of-the-art hardware solutions built for performance and reliability.</p>
+            <h3>PLC Integration & Automation</h3>
+            <p>Real-time production data capture through sophisticated interfaces between custom applications and industrial PLCs.</p>
           </div>
-          <!-- Professional Services Card: Navigate to professional services page -->
-          <div class="product-card" onclick="window.location.href='pages/products/professional-services.html'">
-            <h3>Professional Services</h3>
-            <p>Expert consulting and implementation services to help you succeed.</p>
+          <!-- Reporting & Analytics Card: Navigate to analytics page -->
+          <div class="product-card" onclick="window.location.href='pages/products/software-solutions.html'">
+            <h3>Automated Reporting & Analytics</h3>
+            <p>Comprehensive SSRS reporting solutions for production metrics, health & safety summaries, and operational dashboards.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Downloads Section: Mobile apps, desktop software, and resources -->
-    <section id="downloads" class="section">
+    <!-- Resume Section: Resume download and contact information -->
+    <section id="resume" class="section">
       <div class="container">
-        <h2>Downloads</h2>
+        <h2>Resume & Contact</h2>
         <div class="download-grid">
-          <!-- Mobile Apps Card: Navigate to mobile apps downloads page -->
-          <div class="download-card" onclick="window.location.href='pages/under-construction.html'">
-            <h3>Mobile Apps</h3>
-            <p>Download mobile applications for iOS</p>
+          <!-- Resume Card: View and download resume -->
+          <div class="download-card" onclick="window.location.href='pages/resume.html'">
+            <h3>View & Download Resume</h3>
+            <p>View my resume online or download a PDF copy</p>
           </div>
-          <!-- Desktop Software Card: Navigate to desktop software downloads page -->
+          <!-- Contact Card: Get in touch -->
           <div class="download-card" onclick="window.location.href='pages/under-construction.html'">
-            <h3>Desktop Software</h3>
-            <p>Powerful desktop applications for your business needs.</p>
+            <h3>Get In Touch</h3>
+            <p>Phone: 519.635.2628 | Email: robin.c.obrien@icloud.com<br>Let's connect and discuss new opportunities!</p>
           </div>
-          <!-- Resources Card: Navigate to resources page -->
+          <!-- Social Links Card: Connect on social media -->
           <div class="download-card" onclick="window.location.href='pages/under-construction.html'">
-            <h3>Resources</h3>
-            <p>Access our comprehensive resource library and documentation.</p>
+            <h3>Social Links</h3>
+            <p>Connect with me on GitHub, LinkedIn, and other platforms.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Updates Section: Blog, news, and product roadmap -->
-    <section id="updates" class="section">
+    <!-- Blog Section: Articles and thoughts -->
+    <section id="blog" class="section">
       <div class="container">
-        <h2>Latest Updates</h2>
+        <h2>Blog & Articles</h2>
         <div class="update-grid">
           <!-- Blog Card: Navigate to blog page -->
           <div class="update-card" onclick="window.location.href='pages/under-construction.html'">
-            <h3>Blog</h3>
-            <p>Stay informed with our latest insights and articles about technology trends.</p>
+            <h3>Recent Posts</h3>
+            <p>Read my latest thoughts on technology, development practices, and life as a developer.</p>
           </div>
-          <!-- News Card: Navigate to news page -->
+          <!-- Tutorials Card: Navigate to tutorials page -->
           <div class="update-card" onclick="window.location.href='pages/under-construction.html'">
-            <h3>News</h3>
-            <p>Company news and announcements about our latest developments.</p>
+            <h3>Tutorials</h3>
+            <p>Learning resources and guides I've written to share knowledge with the community.</p>
           </div>
-          <!-- Product Roadmap Card: Navigate to product roadmap page -->
+          <!-- Thoughts Card: Navigate to thoughts/articles page -->
           <div class="update-card" onclick="window.location.href='pages/under-construction.html'">
-            <h3>Product Roadmap</h3>
-            <p>See what's coming next in our product lineup and future plans.</p>
+            <h3>Thoughts & Insights</h3>
+            <p>Personal reflections on software development, career growth, and technology trends.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="support" class="section" aria-label="Support section">
+    <section id="contact" class="section" aria-label="Contact section">
       <div class="container">
-        <h2>Support</h2>
+        <h2>Let's Connect</h2>
         <div class="support-grid">
-          <!-- Documentation Card: Navigate to documentation page on click or Enter key -->
-          <div class="support-card" role="button" tabindex="0" onclick="window.location.href='pages/under-construction.html'" onkeydown="if(event.key === 'Enter') window.location.href='pages/under-construction.html'">
-            <h3>Documentation</h3>
-            <p>Comprehensive guides and manuals to help you get started.</p>
+          <!-- Email Card: Contact information -->
+          <div class="support-card" role="button" tabindex="0" onclick="window.location.href='mailto:robin.c.obrien@icloud.com'" onkeydown="if(event.key === 'Enter') window.location.href='mailto:robin.c.obrien@icloud.com'">
+            <h3>Email</h3>
+            <p>Send me an email for collaborations, opportunities, or just to say hello.<br><strong>robin.c.obrien@icloud.com</strong></p>
           </div>
-          <!-- FAQ Card: Navigate to FAQ page on click or Enter key -->
-          <div class="support-card" role="button" tabindex="0" onclick="window.location.href='pages/under-construction.html'" onkeydown="if(event.key === 'Enter') window.location.href='pages/under-construction.html'">
-            <h3>FAQ</h3>
-            <p>Answers to common questions about our products and services.</p>
+          <!-- Phone Card: Contact information -->
+          <div class="support-card" role="button" tabindex="0" onclick="window.location.href='tel:5196352628'" onkeydown="if(event.key === 'Enter') window.location.href='tel:5196352628'">
+            <h3>Phone</h3>
+            <p>Give me a call to discuss opportunities or projects.<br><strong>519.635.2628</strong></p>
           </div>
-          <!-- Contact Us Card: Navigate to contact page on click or Enter key -->
-          <div class="support-card" role="button" tabindex="0" onclick="window.location.href='pages/under-construction.html'" onkeydown="if(event.key === 'Enter') window.location.href='pages/under-construction.html'">
-            <h3>Contact Us</h3>
-            <p>Get in touch with our support team for assistance.</p>
+          <!-- GitHub Card: Open source contributions -->
+          <div class="support-card" role="button" tabindex="0" onclick="window.open('https://github.com/imposterSyndromium', '_blank', 'noopener,noreferrer')" onkeydown="if(event.key === 'Enter') window.open('https://github.com/imposterSyndromium', '_blank', 'noopener,noreferrer')">
+            <h3>GitHub</h3>
+            <p>Check out my code repositories and open source contributions.<br><strong>github.com/imposterSyndromium</strong></p>
           </div>
         </div>
       </div>
@@ -157,35 +163,36 @@
   <footer>
     <div class="container">
       <div class="footer-content">
-        <!-- About Us section -->
+        <!-- About section -->
         <div class="footer-section">
-          <h3>About Us</h3>
-          <p>Innovating for a better tomorrow.</p>
+          <h3>About</h3>
+          <p>IT Specialist & Application Developer with 13+ years of experience in manufacturing IT support and custom application development.</p>
+          <p style="margin-top: 0.5rem; font-size: 0.9rem;">Listowel, ON</p>
         </div>
         <!-- Quick Links section: Navigation links to main sections -->
         <div class="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#highlights">Highlights</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#downloads">Downloads</a></li>
-            <li><a href="#updates">Updates</a></li>
-            <li><a href="#support">Support</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="pages/highlights/featured-projects.html">Skills & Experience</a></li>
+            <li><a href="pages/highlights/awards.html">Education & Achievements</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
         <!-- Social Media section: Links to social platforms -->
         <div class="footer-section">
           <h3>Connect</h3>
           <div class="social-links">
-            <a href="#" aria-label="Twitter">Twitter</a>
-            <a href="#" aria-label="LinkedIn">LinkedIn</a>
-            <a href="#" aria-label="GitHub">GitHub</a>
+            <a href="https://github.com/imposterSyndromium" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="mailto:robin.c.obrien@icloud.com" aria-label="Email">Email</a>
+            <a href="tel:5196352628" aria-label="Phone">Phone</a>
           </div>
         </div>
       </div>
       <!-- Copyright notice -->
       <div class="footer-bottom">
-        <p>&copy; 2024 ImposterSyndromium. All rights reserved.</p>
+        <p>&copy; 2024 Robin O'Brien. All rights reserved.</p>
       </div>
     </div>
   </footer>

@@ -1,5 +1,5 @@
 /**
- * Main JavaScript File for ImposterSyndromium Website
+ * Main JavaScript File for Robin O'Brien Personal Portfolio Website
  * 
  * Handles:
  * - Mobile menu toggle functionality

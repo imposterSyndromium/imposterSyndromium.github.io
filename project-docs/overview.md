@@ -1,7 +1,7 @@
 # Project Overview
 
 ## Project Vision
-ImposterSyndromium is dedicated to providing innovative technology solutions with a focus on performance, accessibility, and user experience. Our mission is to create a digital presence that showcases our commitment to excellence in technology and design.
+Personal portfolio website for Robin O'Brien, showcasing skills, projects, and professional experience. The site focuses on performance, accessibility, and user experience while providing an engaging digital presence that reflects a passion for technology and continuous improvement.
 
 ## Core Objectives
 1. Create a modern, responsive website that works seamlessly across all devices
@@ -20,10 +20,10 @@ ImposterSyndromium is dedicated to providing innovative technology solutions wit
 - Easy-to-maintain codebase
 
 ## Target Audience
-- Technology professionals
-- Business decision-makers
-- Potential clients and partners
-- General public interested in technology
+- Potential employers and recruiters
+- Technology professionals and peers
+- Potential collaborators
+- Anyone interested in software development
 - Accessibility advocates
 - Mobile users
 

@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <header>
                         <nav>
                             <div class="container">
-                                <a href="/" class="logo">ImposterSyndromium</a>
+                                <a href="/" class="logo">Robin O'Brien</a>
                                 <button class="mobile-menu-btn" aria-label="Toggle menu">
                                     <span></span>
                                     <span></span>
@@ -91,9 +91,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </button>
                                 <ul class="nav-links">
                                     <li><a href="/">Home</a></li>
-                                    <li><a href="/pages/highlights">Highlights</a></li>
-                                    <li><a href="/pages/products">Products</a></li>
-                                    <li><a href="/pages/support">Support</a></li>
+                                    <li><a href="/#about">About</a></li>
+                                    <li><a href="/#projects">Projects</a></li>
+                                    <li><a href="/#contact">Contact</a></li>
                                 </ul>
                             </div>
                         </nav>
