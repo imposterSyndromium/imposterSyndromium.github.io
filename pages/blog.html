@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Robin O'Brien's Blog - Articles on software development, technology, and professional insights">
+  <title>Blog - Robin O'Brien</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header will be included here by header-include.js -->
+  
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Blog & Articles</h1>
+        <p class="blog-intro">Thoughts on technology, development practices, and life as a developer. Sharing knowledge and experiences from over a decade in the field.</p>
+        
+        <!-- Blog Filters -->
+        <div class="blog-filters">
+          <button class="filter-btn active" data-category="all">All Posts</button>
+          <button class="filter-btn" data-category="Development">Development</button>
+          <button class="filter-btn" data-category="Technical">Technical</button>
+          <button class="filter-btn" data-category="Design">Design</button>
+          <button class="filter-btn" data-category="Career">Career</button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="blog-search">
+          <input type="text" id="blog-search-input" placeholder="Search posts by title, tags, or content..." aria-label="Search blog posts">
+          <span class="search-icon">🔍</span>
+        </div>
+
+        <!-- Featured Post Section -->
+        <div id="featured-post-container" class="featured-post-container"></div>
+
+        <!-- Blog Posts Grid -->
+        <div id="blog-posts-container" class="blog-posts-grid"></div>
+
+        <!-- Empty State -->
+        <div id="blog-empty-state" class="blog-empty-state" style="display: none;">
+          <p>No posts found matching your criteria.</p>
+          <button class="filter-btn" onclick="clearFilters()">Clear Filters</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About</h3>
+          <p>IT Specialist & Application Developer with 13+ years of experience.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#resume">Resume</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <div class="social-links">
+            <a href="https://github.com/imposterSyndromium" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="mailto:robin.c.obrien@icloud.com">Email</a>
+            <a href="tel:5196352628">Phone</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Robin O'Brien. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/header-include.js" defer></script>
+  <script src="../js/script.js" defer></script>
+  <script src="../js/blog.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,63 @@
+[
+  {
+    "id": "getting-started-swiftui",
+    "title": "Getting Started with SwiftUI: A Developer's Journey",
+    "excerpt": "After years of working with VB.NET and desktop applications, I decided to expand my skill set by learning SwiftUI. Here's what I've discovered along the way.",
+    "content": "After spending over a decade developing business applications in VB.NET, I found myself drawn to the modern, declarative approach of SwiftUI. The transition hasn't been without its challenges, but it's been incredibly rewarding.\n\n## Why SwiftUI?\n\nSwiftUI represents a paradigm shift from imperative to declarative UI development. Coming from a background where you explicitly tell the system what to do, the declarative nature feels both elegant and powerful.\n\n## Key Learnings\n\n1. **Declarative Syntax**: Writing UIs by describing what you want rather than how to build it\n2. **State Management**: Understanding @State, @Binding, and @ObservableObject\n3. **Reusability**: Building components that can be easily composed and reused\n4. **Live Preview**: The ability to see changes instantly is a game-changer\n\n## Challenges\n\n- Understanding the Swift language nuances\n- Learning iOS/macOS design patterns\n- Adapting to a new build system and toolchain\n- Breaking old habits from imperative programming\n\n## Next Steps\n\nI'm currently working on my first complete SwiftUI application and plan to share more about the development process in future posts. Stay tuned!",
+    "author": "Robin O'Brien",
+    "date": "2024-01-15",
+    "category": "Development",
+    "tags": ["Swift", "SwiftUI", "iOS", "Learning"],
+    "readTime": 5,
+    "featured": true
+  },
+  {
+    "id": "vbnet-to-modern-development",
+    "title": "From VB.NET to Modern Development: Lessons Learned",
+    "excerpt": "Reflecting on over a decade of VB.NET development and what it's taught me about software engineering principles that apply across all technologies.",
+    "content": "Working with VB.NET for the past 13 years has given me a unique perspective on software development. While some might view VB.NET as legacy technology, the principles I've learned are timeless.\n\n## The Value of Experience\n\nYears of developing business-critical applications have taught me that good software engineering principles transcend specific technologies:\n\n- **Problem-solving**: Understanding the business need before writing code\n- **Maintainability**: Writing code that others (and future you) can understand\n- **Testing**: Building systems that can be trusted in production\n- **Documentation**: Creating code that documents itself\n\n## Lessons That Apply Everywhere\n\n### 1. Start with Understanding\n\nBefore writing any code, understand the problem completely. Talk to users, analyze workflows, and identify edge cases.\n\n### 2. Write for Humans\n\nCode is read far more often than it's written. Clear variable names, logical structure, and good comments make a world of difference.\n\n### 3. Build Incrementally\n\nBreak large problems into smaller, manageable pieces. Test each piece before moving to the next.\n\n### 4. Expect Change\n\nRequirements change. Technology changes. Build flexibility into your designs from the start.\n\n## Moving Forward\n\nWhile I continue to maintain and enhance VB.NET applications, I'm also exploring modern technologies like SwiftUI and web development. The principles remain the same, but the tools keep evolving.",
+    "author": "Robin O'Brien",
+    "date": "2024-01-08",
+    "category": "Development",
+    "tags": ["VB.NET", "Software Engineering", "Career"],
+    "readTime": 6,
+    "featured": true
+  },
+  {
+    "id": "plc-integration-insights",
+    "title": "Integrating Custom Applications with PLCs: Real-World Challenges",
+    "excerpt": "Sharing insights from building interfaces between custom VB.NET applications and industrial PLCs, including the challenges and solutions that made it work.",
+    "content": "One of the most challenging and rewarding aspects of my work has been creating interfaces between custom VB.NET applications and industrial Programmable Logic Controllers (PLCs).\n\n## The Challenge\n\nManufacturing environments rely heavily on PLCs for process control. The data these systems generate is valuable for reporting, analysis, and decision-making. However, extracting and using this data in business applications isn't always straightforward.\n\n## The Approach\n\n### 1. Understanding the PLC Network\n\nFirst, I had to understand how the PLCs communicate:\n- Network topology\n- Communication protocols\n- Data structure and formatting\n- Timing and synchronization requirements\n\n### 2. Building Reliable Connections\n\nReliability is critical in manufacturing. A failure here can impact production. Key considerations:\n- Error handling and reconnection logic\n- Data validation\n- Logging and monitoring\n- Graceful degradation\n\n### 3. Processing Real-Time Data\n\nReal-time data brings unique challenges:\n- Handling high-frequency updates\n- Managing memory efficiently\n- Ensuring data consistency\n- Providing real-time feedback to users\n\n## Solutions That Worked\n\n- Implementing robust connection pooling\n- Using asynchronous operations to prevent UI blocking\n- Creating comprehensive logging for troubleshooting\n- Building admin tools for monitoring connection health\n\n## Lessons Learned\n\n1. Always assume connections will fail\n2. Log everything - you'll need it for troubleshooting\n3. Test with realistic data volumes\n4. Build monitoring and alerting into the system\n5. Document the communication protocols thoroughly\n\nThis type of integration work has been some of the most technically challenging and satisfying in my career.",
+    "author": "Robin O'Brien",
+    "date": "2024-01-01",
+    "category": "Technical",
+    "tags": ["PLC", "Integration", "VB.NET", "Manufacturing"],
+    "readTime": 7,
+    "featured": false
+  },
+  {
+    "id": "building-kpi-dashboards",
+    "title": "Building Effective KPI Dashboards: Design Principles",
+    "excerpt": "After building numerous KPI tracking systems, I've learned what makes a dashboard truly effective. Here are the principles that guide my design decisions.",
+    "content": "Key Performance Indicators (KPIs) are essential for decision-making in manufacturing environments. Over the years, I've built multiple dashboard systems, and I've learned what makes them effective.\n\n## Principles of Effective Dashboards\n\n### 1. Know Your Audience\n\nDifferent users need different information:\n- Executives need high-level summaries\n- Managers need departmental metrics\n- Operators need real-time operational data\n- Analysts need detailed data access\n\n### 2. Show What Matters\n\nAvoid information overload. Focus on:\n- Metrics that drive decisions\n- Indicators that require action\n- Trends over raw numbers\n- Context for understanding data\n\n### 3. Make It Visual\n\nWell-designed visualizations:\n- Communicate faster than tables of numbers\n- Highlight important information\n- Show relationships between metrics\n- Make trends immediately apparent\n\n### 4. Keep It Real-Time\n\nStale data leads to poor decisions. Design systems that:\n- Update automatically\n- Show data freshness\n- Handle delays gracefully\n- Provide historical context\n\n### 5. Enable Interaction\n\nStatic dashboards are limited. Allow users to:\n- Filter and drill down\n- Adjust time ranges\n- Compare periods\n- Export data for analysis\n\n## Technical Considerations\n\n- Efficient data queries (avoid N+1 problems)\n- Caching strategies for performance\n- Responsive design for different screen sizes\n- Print-friendly layouts when needed\n\n## Common Pitfalls to Avoid\n\n1. Showing too much information at once\n2. Using inappropriate chart types\n3. Ignoring mobile users\n4. Making assumptions about user needs\n5. Forgetting about accessibility\n\nGreat dashboards don't just display data—they tell a story and enable better decision-making.",
+    "author": "Robin O'Brien",
+    "date": "2023-12-20",
+    "category": "Design",
+    "tags": ["KPI", "Dashboards", "Data Visualization", "UX"],
+    "readTime": 5,
+    "featured": false
+  },
+  {
+    "id": "continuous-learning-developer",
+    "title": "The Continuous Learning Mindset: Staying Relevant in Tech",
+    "excerpt": "Technology changes rapidly. Here's how I approach continuous learning and stay current while maintaining existing systems and building new ones.",
+    "content": "In technology, standing still means falling behind. After 13 years in the field, I've developed strategies for continuous learning that fit into a busy schedule.\n\n## Why Continuous Learning Matters\n\nTechnology evolves at an incredible pace:\n- New frameworks and languages emerge\n- Best practices evolve\n- Tools improve constantly\n- Industry requirements shift\n\nStaying current isn't optional—it's essential.\n\n## My Approach\n\n### 1. Allocate Regular Time\n\nI block time each week for learning:\n- Morning reading before work\n- Dedicated evening study sessions\n- Weekend deep-dive projects\n- Conference and course attendance\n\n### 2. Learn by Doing\n\nI don't just read—I build:\n- Personal projects to explore new technologies\n- Experimentation with different approaches\n- Refactoring existing code with new patterns\n- Contributing to open source\n\n### 3. Stay Curious\n\nI maintain curiosity about:\n- How things work under the hood\n- Alternative approaches to problems\n- Industry trends and discussions\n- Tools and techniques used by others\n\n### 4. Share Knowledge\n\nTeaching reinforces learning:\n- Writing blog posts (like this one!)\n- Explaining concepts to colleagues\n- Code reviews and discussions\n- Documentation and comments\n\n## Current Learning Focus\n\nRight now, I'm focused on:\n- SwiftUI and iOS development\n- Modern web development practices\n- Cloud architecture and deployment\n- DevOps and automation\n\n## Challenges\n\nFinding time isn't always easy:\n- Work demands can be intense\n- Family commitments\n- Maintaining existing systems\n- Balancing depth vs. breadth\n\nThe key is consistency over intensity. A little bit regularly beats occasional deep dives.\n\n## Final Thoughts\n\nContinuous learning is a journey, not a destination. Embrace the process, stay curious, and remember that every expert was once a beginner.",
+    "author": "Robin O'Brien",
+    "date": "2023-12-10",
+    "category": "Career",
+    "tags": ["Learning", "Career Development", "Technology"],
+    "readTime": 6,
+    "featured": false
+  }
+]
+
