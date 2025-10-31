@@ -1,4 +1,20 @@
-// Mobile menu functionality
+/**
+ * Main JavaScript File for ImposterSyndromium Website
+ * 
+ * Handles:
+ * - Mobile menu toggle functionality
+ * - Smooth scrolling for anchor links
+ * - Scroll-based animations using Intersection Observer API
+ * - Parallax effects on hero section
+ * - Performance-optimized scroll handling
+ */
+
+/**
+ * Mobile Menu Functionality
+ * Initializes mobile menu toggle, dropdown handling, and accessibility features
+ * Note: This functionality is also partially duplicated in header-include.js
+ * TODO: Consider consolidating mobile menu logic into a single module
+ */
 document.addEventListener('DOMContentLoaded', function() {
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const navLinks = document.querySelector('.nav-links');
@@ -56,7 +72,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Smooth scrolling for anchor links
+/**
+ * Smooth Scrolling for Anchor Links
+ * Enables smooth scrolling behavior for all internal page anchors
+ * Also handles mobile menu closure when navigating to anchor links
+ */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -85,23 +105,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Enhanced scroll animations with performance optimizations
+/**
+ * Enhanced Scroll Animations with Performance Optimizations
+ * Uses Intersection Observer API for efficient scroll-based animations
+ * Animates sections and cards as they enter the viewport
+ */
 const sections = document.querySelectorAll('.section');
 const cards = document.querySelectorAll('.card, .product-card, .download-card, .update-card, .support-card');
 
-// Function to reset element styles for animation
+/**
+ * Reset element styles for animation
+ * Sets initial opacity and transform values before animation
+ * @param {HTMLElement} element - The element to reset
+ */
 function resetElementStyles(element) {
   element.style.opacity = '0';
   element.style.transform = 'translateY(20px)';
 }
 
-// Function to animate element
+/**
+ * Animate element into view
+ * Applies opacity and transform transitions for fade-in effect
+ * @param {HTMLElement} element - The element to animate
+ */
 function animateElement(element) {
   element.style.opacity = '1';
   element.style.transform = 'translateY(0)';
 }
 
-// Set up initial styles with will-change for better performance
+/**
+ * Set up initial styles with will-change for better performance
+ * Prepares elements for animation using CSS will-change property
+ * This hints to the browser about upcoming animations for optimization
+ */
 sections.forEach(section => {
   resetElementStyles(section);
   section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
@@ -114,7 +150,11 @@ cards.forEach(card => {
   card.style.willChange = 'opacity, transform';
 });
 
-// Create intersection observer for sections with optimized settings
+/**
+ * Intersection Observer for Sections
+ * Observes when sections enter the viewport and triggers animations
+ * Unobserves elements after animation to improve performance
+ */
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -128,7 +168,11 @@ const sectionObserver = new IntersectionObserver((entries) => {
   rootMargin: '50px'
 });
 
-// Create intersection observer for cards with optimized settings
+/**
+ * Intersection Observer for Cards
+ * Observes when cards enter the viewport and triggers animations
+ * Unobserves elements after animation to improve performance
+ */
 const cardObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -142,11 +186,17 @@ const cardObserver = new IntersectionObserver((entries) => {
   rootMargin: '50px'
 });
 
-// Observe all sections and cards
+/**
+ * Observe all sections and cards for intersection events
+ */
 sections.forEach(section => sectionObserver.observe(section));
 cards.forEach(card => cardObserver.observe(card));
 
-// Optimized scroll event listener with requestAnimationFrame
+/**
+ * Optimized Scroll Event Listener
+ * Uses requestAnimationFrame to throttle scroll events for performance
+ * Implements parallax effect on hero section and dynamic card scaling
+ */
 let ticking = false;
 window.addEventListener('scroll', () => {
   if (!ticking) {

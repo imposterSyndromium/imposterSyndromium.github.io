@@ -1,12 +1,28 @@
-/* Version: 1.0.1 */
-/* Modern CSS Reset */
+/**
+ * Main Stylesheet for ImposterSyndromium Website
+ * Version: 1.0.1
+ * 
+ * This stylesheet implements a dark theme design with:
+ * - Modern CSS reset
+ * - CSS custom properties (variables) for theming
+ * - Responsive design patterns
+ * - Smooth animations and transitions
+ * - Card-based layout system
+ * - Fixed navigation header
+ */
+
+/* Modern CSS Reset: Normalizes browser default styles */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Variables - Dark Theme (Default) */
+/**
+ * CSS Custom Properties - Dark Theme (Default)
+ * These variables define the color scheme and design tokens used throughout the site
+ * Note: Theme switching functionality is defined but theme switcher is hidden
+ */
 :root {
   --primary-color: #5d27ae;
   --secondary-color: #8f6ad3;
@@ -24,7 +40,10 @@
   --card-glow: 0 0 30px rgba(69, 39, 160, 0.5);
 }
 
-/* Base Styles */
+/**
+ * Base Styles
+ * Sets up typography, colors, and base layout for the entire document
+ */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
   line-height: 1.47059;
@@ -86,7 +105,7 @@ body {
 }
 
 .logo-img {
-  height: 80px;
+  height: 64px;
   width: auto;
   margin-right: 15px;
   border-radius: 6px;
@@ -105,7 +124,7 @@ body {
   }
   
   .logo-img {
-    height: 60px;
+    height: 48px;
   }
 }
 
@@ -209,6 +228,7 @@ body {
 .section {
   padding: 6rem 0;
   position: relative;
+  margin-top: 144px; /* Space for banner (44px) + nav (100px) */
 }
 
 .section h2 {
@@ -446,7 +466,7 @@ footer {
 
 /* Story Card Styles */
 .story-card {
-  background-color: var(--card-background);
+  background-color: var(--card-bg);
   border-radius: 0.5rem;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
@@ -483,7 +503,7 @@ footer {
 }
 
 .award-card {
-  background-color: var(--card-background);
+  background-color: var(--card-bg);
   border-radius: 0.5rem;
   padding: 1.5rem;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -519,7 +539,7 @@ footer {
 }
 
 .project-card {
-  background-color: var(--card-background);
+  background-color: var(--card-bg);
   border-radius: 0.5rem;
   padding: 1.5rem;
   transition: transform 0.2s, box-shadow 0.2s;

@@ -1,17 +1,36 @@
-<!-- Site Message Banner -->
-<div id="site-message" class="site-message" style="display: block;">This site is under construction. Please check back soon for updates!</div>
+<!-- 
+  Header Component
+  
+  This header component is dynamically loaded into all pages via header-include.js.
+  Contains:
+  - Site message banner (populated dynamically from data/site-message.txt)
+  - Main navigation with dropdown menus
+  - Logo with image and text
+  - Mobile menu button
+  
+  Note: Image path uses absolute path which may break on subdirectory pages.
+  TODO: Consider making image path relative or using path calculation similar to header-include.js
+-->
 
-<!-- Navigation Header -->
+<!-- Site Message Banner: Displayed only when site-message.txt contains content -->
+<!-- This div is populated dynamically by header-include.js and starts hidden -->
+<div id="site-message" class="site-message" style="display: none;"></div>
+
+<!-- Navigation Header: Fixed position navigation bar -->
 <header>
   <nav class="main-nav">
     <div class="container">
+      <!-- Logo Section: Links to home page -->
       <div class="logo">
         <a href="/index.html">
-          <img src="/images/Robin.png" alt="ImposterSyndromium Logo" class="logo-img">
+          <!-- Logo Image: Note - absolute path may break on subdirectory pages -->
+          <img src="/images/robin.png?v=1730282400" alt="ImposterSyndromium Logo" class="logo-img">
           <span class="logo-text">ImposterSyndromium 2.0</span>
         </a>
       </div>
+      <!-- Main Navigation Links: Dropdown menus for each section -->
       <ul class="nav-links">
+        <!-- Highlights Dropdown: Main section link with submenu -->
         <li class="nav-item dropdown">
           <a href="/index.html#highlights">Highlights</a>
           <ul class="dropdown-menu">
@@ -20,6 +39,7 @@
             <li><a href="/pages/highlights/awards.html">Awards</a></li>
           </ul>
         </li>
+        <!-- Products Dropdown: Main section link with submenu -->
         <li class="nav-item dropdown">
           <a href="/index.html#products">Products</a>
           <ul class="dropdown-menu">
@@ -28,32 +48,36 @@
             <li><a href="/pages/products/professional-services.html">Professional Services</a></li>
           </ul>
         </li>
+        <!-- Downloads Dropdown: Main section link with submenu -->
         <li class="nav-item dropdown">
           <a href="/index.html#downloads">Downloads</a>
           <ul class="dropdown-menu">
-            <li><a href="/pages/downloads/mobile-apps.html">Mobile Apps</a></li>
-            <li><a href="/pages/downloads/desktop-software.html">Desktop Software</a></li>
-            <li><a href="/pages/downloads/resources.html">Resources</a></li>
+            <li><a href="/pages/under-construction.html">Mobile Apps</a></li>
+            <li><a href="/pages/under-construction.html">Desktop Software</a></li>
+            <li><a href="/pages/under-construction.html">Resources</a></li>
           </ul>
         </li>
+        <!-- Updates Dropdown: Main section link with submenu -->
         <li class="nav-item dropdown">
           <a href="/index.html#updates">Updates</a>
           <ul class="dropdown-menu">
-            <li><a href="/pages/updates/blog.html">Blog</a></li>
-            <li><a href="/pages/updates/news.html">News</a></li>
-            <li><a href="/pages/updates/product-roadmap.html">Product Roadmap</a></li>
+            <li><a href="/pages/under-construction.html">Blog</a></li>
+            <li><a href="/pages/under-construction.html">News</a></li>
+            <li><a href="/pages/under-construction.html">Product Roadmap</a></li>
           </ul>
         </li>
+        <!-- Support Dropdown: Main section link with submenu -->
         <li class="nav-item dropdown">
           <a href="/index.html#support">Support</a>
           <ul class="dropdown-menu">
-            <li><a href="/pages/support/documentation.html">Documentation</a></li>
-            <li><a href="/pages/support/faq.html">FAQ</a></li>
-            <li><a href="/pages/support/contact.html">Contact Us</a></li>
+            <li><a href="/pages/under-construction.html">Documentation</a></li>
+            <li><a href="/pages/under-construction.html">FAQ</a></li>
+            <li><a href="/pages/under-construction.html">Contact Us</a></li>
           </ul>
         </li>
       </ul>
-      <button class="mobile-menu-btn">☰</button>
+      <!-- Mobile Menu Button: Toggles navigation menu on mobile devices -->
+      <button class="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">☰</button>
     </div>
   </nav>
 </header> 
