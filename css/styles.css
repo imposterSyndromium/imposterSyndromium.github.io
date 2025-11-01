@@ -332,6 +332,33 @@ body {
   box-shadow: var(--card-glow);
 }
 
+.support-card-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  position: relative;
+  z-index: 2;
+}
+
+.support-card-icon svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 2px 4px rgba(93, 39, 174, 0.3));
+}
+
+.support-card:hover .support-card-icon {
+  transform: scale(1.1);
+  color: var(--secondary-color);
+}
+
+.support-card:hover .support-card-icon svg {
+  filter: drop-shadow(0 4px 8px rgba(93, 39, 174, 0.5));
+}
+
 .card h3, .product-card h3, .download-card h3, .update-card h3, .support-card h3 {
   position: relative;
   z-index: 2;
