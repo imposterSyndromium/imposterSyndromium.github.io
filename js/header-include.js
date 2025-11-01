@@ -177,8 +177,7 @@ function displaySiteMessage(text) {
     if (!messageContainer) return;
 
     if (text) {
-        // Add construction icon before the text
-        messageContainer.textContent = '🚧  ' + text + '  🚧 ';
+        messageContainer.textContent = text;
         messageContainer.style.display = 'block';
         messageContainer.setAttribute('aria-live', 'polite');
     } else {
