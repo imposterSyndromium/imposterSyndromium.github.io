@@ -8,11 +8,11 @@
   <!-- SEO meta description -->
   <meta name="description" content="About Robin O'Brien - Software Developer, Technology Enthusiast, and Creative Problem Solver">
   <!-- SEO meta keywords -->
-  <meta name="keywords" content="robin obrien, software developer, web developer, portfolio, about me, technology, programming">
+  <meta name="keywords" content="robin obrien, software developer, portfolio, about me, technology, programming">
   <!-- Page title -->
   <title>Robin O'Brien - About Me</title>
   <!-- Main stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=1.1.2">
   <!-- Google Fonts - Inter font family -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -28,6 +28,25 @@
         <h1>Make change. Be swift. Think different.</h1>
         <p>The future is always ahead of you. The past is always behind you. The present is what is right here, right now...</p>
         <p>Innovation, Kaizen mind, curiosity, and a passion for technology. I'm dedicated to providing the best possible solutions for the problems you need solved.</p>
+        <!-- Platform Logos -->
+        <div class="hero-platform-logos">
+          <div class="platform-logo" title="Microsoft Windows">
+            <svg viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 12.402L37.58 7.215V41.975H0V12.402ZM0 50.955H37.58V81.189L0 75.985V50.955ZM41.872 7.273L88 2.11V41.975H41.872V7.273ZM88 50.955V87.89L41.872 82.727V50.955H88Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="platform-logo" title="Apple macOS">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+          </div>
+          <div class="platform-logo" title="Linux">
+            <img src="images/tux.png?v=1.1.2" alt="Linux Tux" />
+          </div>
+          <div class="platform-logo" title="Android">
+            <img src="images/android.png?v=1.1.2" alt="Android Robot" />
+          </div>
+        </div>
         <!-- Call-to-action button linking to about section -->
         <a href="#about" class="cta-button" role="button">Learn more about me</a>
       </div>
@@ -98,14 +117,14 @@
             <p>View my resume online or download a PDF copy</p>
           </div>
           <!-- Contact Card: Get in touch -->
-          <div class="download-card" onclick="window.location.href='pages/under-construction.html'">
+          <div class="download-card" onclick="window.location.href='pages/social-links.html'">
             <h3>Get In Touch</h3>
-            <p>Phone: 519.635.2628 | Email: robin.c.obrien@icloud.com<br>Let's connect and discuss new opportunities!</p>
+            <p>Email: robin@robinobrien.me<br>Let's connect and discuss new opportunities!</p>
           </div>
           <!-- Social Links Card: Connect on social media -->
-          <div class="download-card" onclick="window.location.href='pages/under-construction.html'">
+          <div class="download-card" onclick="window.location.href='pages/social-links.html'">
             <h3>Social Links</h3>
-            <p>Connect with me on GitHub, LinkedIn, and other platforms.</p>
+            <p>Connect with me on GitHub or email me directly</p>
           </div>
         </div>
       </div>
@@ -124,7 +143,7 @@
           <!-- Tutorials Card: Navigate to blog page -->
           <div class="update-card" onclick="window.location.href='pages/blog.html'">
             <h3>Tutorials</h3>
-            <p>Learning resources and guides I've written to share knowledge with the community.</p>
+            <p>Learning resources and guides to share knowledge with the community.</p>
           </div>
           <!-- Thoughts Card: Navigate to blog page -->
           <div class="update-card" onclick="window.location.href='pages/blog.html'">
@@ -140,19 +159,16 @@
         <h2>Let's Connect</h2>
         <div class="support-grid">
           <!-- Email Card: Contact information -->
-          <div class="support-card" role="button" tabindex="0" onclick="window.location.href='mailto:robin.c.obrien@icloud.com'" onkeydown="if(event.key === 'Enter') window.location.href='mailto:robin.c.obrien@icloud.com'">
+          <div class="support-card" role="button" tabindex="0" onclick="window.location.href='mailto:robin@robinobrien.me'" onkeydown="if(event.key === 'Enter') window.location.href='mailto:robin@robinobrien.me'">
             <h3>Email</h3>
-            <p>Send me an email for collaborations, opportunities, or just to say hello.<br><strong>robin.c.obrien@icloud.com</strong></p>
+            <p>Send me an email for collaborations, opportunities, or just to say hello.<br><strong>robin@robinobrien.me</strong></p>
           </div>
           <!-- Phone Card: Contact information -->
-          <div class="support-card" role="button" tabindex="0" onclick="window.location.href='tel:5196352628'" onkeydown="if(event.key === 'Enter') window.location.href='tel:5196352628'">
-            <h3>Phone</h3>
-            <p>Give me a call to discuss opportunities or projects.<br><strong>519.635.2628</strong></p>
-          </div>
+          <!-- Phone contact removed -->
           <!-- GitHub Card: Open source contributions -->
-          <div class="support-card" role="button" tabindex="0" onclick="window.open('https://github.com/imposterSyndromium', '_blank', 'noopener,noreferrer')" onkeydown="if(event.key === 'Enter') window.open('https://github.com/imposterSyndromium', '_blank', 'noopener,noreferrer')">
+          <div class="support-card" role="button" tabindex="0" onclick="window.open('https://github.com/imposterSyndromium/', '_blank', 'noopener,noreferrer')" onkeydown="if(event.key === 'Enter') window.open('https://github.com/imposterSyndromium/', '_blank', 'noopener,noreferrer')">
             <h3>GitHub</h3>
-            <p>Check out my code repositories and open source contributions.<br><strong>github.com/imposterSyndromium</strong></p>
+            <p>Check out my code repositories and open source contributions.<br><strong>github.com/imposterSyndromium/</strong></p>
           </div>
         </div>
       </div>
@@ -179,14 +195,32 @@
             <li><a href="#resume">Resume</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
+          <!-- Platform Logos -->
+          <div class="platform-logos">
+            <div class="platform-logo" title="Microsoft Windows">
+              <svg viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 12.402L37.58 7.215V41.975H0V12.402ZM0 50.955H37.58V81.189L0 75.985V50.955ZM41.872 7.273L88 2.11V41.975H41.872V7.273ZM88 50.955V87.89L41.872 82.727V50.955H88Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="platform-logo" title="Apple macOS">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+            </div>
+            <div class="platform-logo" title="Linux">
+              <img src="../images/tux.png?v=1.1.2" alt="Linux Tux" />
+            </div>
+            <div class="platform-logo" title="Android">
+              <img src="../images/android.png?v=1.1.2" alt="Android Robot" />
+            </div>
+          </div>
         </div>
         <!-- Social Media section: Links to social platforms -->
         <div class="footer-section">
           <h3>Connect</h3>
           <div class="social-links">
-            <a href="https://github.com/imposterSyndromium" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="mailto:robin.c.obrien@icloud.com" aria-label="Email">Email</a>
-            <a href="tel:5196352628" aria-label="Phone">Phone</a>
+            <a href="https://github.com/imposterSyndromium/" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="mailto:robin@robinobrien.me" aria-label="Email">Email</a>
           </div>
         </div>
       </div>
@@ -199,8 +233,8 @@
 
   <!-- JavaScript files loaded with defer attribute for performance -->
   <!-- header-include.js: Dynamically includes header component and handles site message -->
-  <script src="js/header-include.js" defer></script>
+  <script src="js/header-include.js?v=1.1.2" defer></script>
   <!-- script.js: Handles mobile menu, smooth scrolling, and scroll animations -->
-  <script src="js/script.js" defer></script>
+  <script src="js/script.js?v=1.1.2" defer></script>
 </body>
 </html>

@@ -117,4 +117,3 @@ This project is open source and available under the [MIT License](LICENSE).
 For more information, please contact:
 
 - Email: contact@impostersyndromium.com
-- Phone: +1 (555) 123-4567

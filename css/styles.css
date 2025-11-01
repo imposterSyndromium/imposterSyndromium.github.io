@@ -196,6 +196,46 @@ body {
   letter-spacing: -1px;
 }
 
+/* Hero Platform Logos */
+.hero-platform-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  margin: 2.5rem 0;
+  flex-wrap: wrap;
+}
+
+.platform-logo {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  opacity: 0.8;
+  transition: var(--transition);
+  cursor: default;
+}
+
+.platform-logo:hover {
+  opacity: 1;
+  transform: translateY(-3px) scale(1.1);
+}
+
+.platform-logo img,
+.platform-logo svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.platform-logo:hover img,
+.platform-logo:hover svg {
+  filter: drop-shadow(0 4px 8px rgba(93, 39, 174, 0.5));
+}
+
 .hero p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
@@ -226,9 +266,12 @@ body {
 
 /* Sections */
 .section {
-  padding: 6rem 0;
+  padding: 3rem 0;
   position: relative;
-  margin-top: 144px; /* Space for banner (44px) + nav (100px) */
+}
+
+.section:first-of-type {
+  margin-top: 144px; /* Space for banner (44px) + nav (100px) - only on first section */
 }
 
 .section h2 {
@@ -341,6 +384,27 @@ footer {
   opacity: 0.8;
 }
 
+/* Platform Logos in Footer */
+.platform-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-section .platform-logo {
+  width: 40px;
+  height: 40px;
+  opacity: 0.7;
+}
+
+.footer-section .platform-logo:hover {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.05);
+}
+
 .footer-bottom {
   text-align: center;
   padding-top: 2rem;
@@ -392,6 +456,24 @@ footer {
 
   .hero p {
     font-size: 1.2rem;
+  }
+
+  .hero-platform-logos {
+    gap: 1.5rem;
+  }
+
+  .platform-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .footer-section .platform-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .platform-logos {
+    gap: 1rem;
   }
 
   .section h2 {
