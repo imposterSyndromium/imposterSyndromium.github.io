@@ -236,6 +236,17 @@ body {
   filter: drop-shadow(0 4px 8px rgba(93, 39, 174, 0.5));
 }
 
+/* Android Icon - 20% larger than other platform logos */
+.platform-logo[title="Android"] {
+  width: 67.2px;
+  height: 67.2px;
+}
+
+.footer-section .platform-logo[title="Android"] {
+  width: 48px;
+  height: 48px;
+}
+
 .hero p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
@@ -494,9 +505,20 @@ footer {
     height: 48px;
   }
 
+  /* Android Icon - 20% larger in responsive mode */
+  .platform-logo[title="Android"] {
+    width: 57.6px;
+    height: 57.6px;
+  }
+
   .footer-section .platform-logo {
     width: 36px;
     height: 36px;
+  }
+
+  .footer-section .platform-logo[title="Android"] {
+    width: 43.2px;
+    height: 43.2px;
   }
 
   .platform-logos {
