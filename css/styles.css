@@ -600,6 +600,16 @@ footer::before {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* Force black background on mobile */
+  body {
+    background-color: #000000 !important;
+  }
+
+  /* Ensure cards have proper background on mobile */
+  .card, .product-card, .download-card, .update-card, .support-card {
+    background-color: #1d1d1f !important;
+  }
+
   .nav-links {
     display: none;
     position: absolute;
