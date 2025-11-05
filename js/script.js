@@ -137,18 +137,34 @@ function animateElement(element) {
  * Set up initial styles with will-change for better performance
  * Prepares elements for animation using CSS will-change property
  * This hints to the browser about upcoming animations for optimization
+ * Only apply animations on larger screens to avoid mobile visibility issues
  */
-sections.forEach(section => {
-  resetElementStyles(section);
-  section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-  section.style.willChange = 'opacity, transform';
-});
+const isMobile = window.innerWidth <= 768;
 
-cards.forEach(card => {
-  resetElementStyles(card);
-  card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-  card.style.willChange = 'opacity, transform';
-});
+if (!isMobile) {
+  sections.forEach(section => {
+    resetElementStyles(section);
+    section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    section.style.willChange = 'opacity, transform';
+  });
+
+  cards.forEach(card => {
+    resetElementStyles(card);
+    card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    card.style.willChange = 'opacity, transform';
+  });
+} else {
+  // On mobile, ensure cards are visible immediately
+  sections.forEach(section => {
+    section.style.opacity = '1';
+    section.style.transform = 'translateY(0)';
+  });
+
+  cards.forEach(card => {
+    card.style.opacity = '1';
+    card.style.transform = 'translateY(0)';
+  });
+}
 
 /**
  * Intersection Observer for Sections
@@ -188,39 +204,45 @@ const cardObserver = new IntersectionObserver((entries) => {
 
 /**
  * Observe all sections and cards for intersection events
+ * Only on non-mobile devices to avoid visibility issues on mobile
  */
-sections.forEach(section => sectionObserver.observe(section));
-cards.forEach(card => cardObserver.observe(card));
+if (!isMobile) {
+  sections.forEach(section => sectionObserver.observe(section));
+  cards.forEach(card => cardObserver.observe(card));
+}
 
 /**
  * Optimized Scroll Event Listener
  * Uses requestAnimationFrame to throttle scroll events for performance
  * Implements parallax effect on hero section and dynamic card scaling
+ * Only apply dynamic effects on desktop to avoid mobile performance issues
  */
 let ticking = false;
 window.addEventListener('scroll', () => {
   if (!ticking) {
     window.requestAnimationFrame(() => {
       const scrollPosition = window.scrollY;
-      
+
       // Add parallax effect to hero section
       const hero = document.querySelector('.hero');
       if (hero) {
         hero.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
       }
-      
-      // Add subtle scale effect to cards when they're in view
-      cards.forEach(card => {
-        const rect = card.getBoundingClientRect();
-        const isInView = rect.top < window.innerHeight && rect.bottom >= 0;
-        
-        if (isInView) {
-          const distanceFromCenter = Math.abs(rect.top + rect.height/2 - window.innerHeight/2);
-          const scale = 1 - (distanceFromCenter / window.innerHeight) * 0.1;
-          card.style.transform = `translateY(0) scale(${scale})`;
-        }
-      });
-      
+
+      // Add subtle scale effect to cards when they're in view (desktop only)
+      if (!isMobile) {
+        cards.forEach(card => {
+          const rect = card.getBoundingClientRect();
+          const isInView = rect.top < window.innerHeight && rect.bottom >= 0;
+
+          if (isInView) {
+            const distanceFromCenter = Math.abs(rect.top + rect.height/2 - window.innerHeight/2);
+            const scale = 1 - (distanceFromCenter / window.innerHeight) * 0.1;
+            card.style.transform = `translateY(0) scale(${scale})`;
+          }
+        });
+      }
+
       ticking = false;
     });
     ticking = true;
