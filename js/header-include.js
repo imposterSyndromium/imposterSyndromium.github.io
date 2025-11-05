@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (cache.header) {
         document.body.insertAdjacentHTML('afterbegin', cache.header);
         initializeSiteMessage();
-        // Mobile menu is initialized in script.js (no need to duplicate)
+        initializeMobileMenu();
     } else {
         fetch(headerPath)
             .then(response => {
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 cache.header = data;
                 document.body.insertAdjacentHTML('afterbegin', data);
                 initializeSiteMessage();
-                // Mobile menu is initialized in script.js (no need to duplicate)
+                initializeMobileMenu();
             })
             .catch(error => {
                 console.error('Error loading header:', error);
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </header>
                 `;
                 document.body.insertAdjacentHTML('afterbegin', fallbackHeader);
-                // Mobile menu is initialized in script.js (no need to duplicate)
+                initializeMobileMenu();
             });
     }
 });
@@ -183,4 +183,70 @@ function displaySiteMessage(text) {
     } else {
         messageContainer.style.display = 'none';
     }
+}
+
+/**
+ * Initialize Mobile Menu Functionality
+ * Sets up event listeners for the mobile menu toggle button and handles:
+ * - Mobile menu open/close
+ * - Dropdown menu toggling on mobile
+ * - Click outside to close
+ * - Escape key to close
+ * - Accessibility attributes
+ */
+function initializeMobileMenu() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    const dropdownItems = document.querySelectorAll('.nav-item.dropdown');
+
+    if (!mobileMenuBtn || !navLinks) return;
+
+    // Toggle mobile menu
+    mobileMenuBtn.addEventListener('click', function() {
+        const isExpanded = navLinks.classList.toggle('active');
+        mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
+        mobileMenuBtn.setAttribute('aria-label', isExpanded ? 'Close menu' : 'Open menu');
+    });
+
+    // Handle dropdowns on mobile
+    dropdownItems.forEach(item => {
+        const link = item.querySelector('a');
+        if (link) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    const isExpanded = item.classList.toggle('active');
+                    link.setAttribute('aria-expanded', isExpanded);
+                }
+            });
+        }
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            navLinks.classList.remove('active');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            mobileMenuBtn.setAttribute('aria-label', 'Open menu');
+            dropdownItems.forEach(item => {
+                item.classList.remove('active');
+                const link = item.querySelector('a');
+                if (link) link.setAttribute('aria-expanded', 'false');
+            });
+        }
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            navLinks.classList.remove('active');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            mobileMenuBtn.setAttribute('aria-label', 'Open menu');
+            dropdownItems.forEach(item => {
+                item.classList.remove('active');
+                const link = item.querySelector('a');
+                if (link) link.setAttribute('aria-expanded', 'false');
+            });
+        }
+    });
 } 
