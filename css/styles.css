@@ -194,6 +194,18 @@ body {
   font-weight: 600;
   margin-bottom: 1rem;
   letter-spacing: -1px;
+  background: linear-gradient(90deg,
+    var(--secondary-color) 0%,
+    var(--primary-color) 10%,
+    var(--secondary-color) 20%,
+    var(--text-color) 30%,
+    var(--text-color) 100%);
+  background-size: 300% auto;
+  background-position: 100% center;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer-landing 2.5s ease-out 1s forwards;
 }
 
 /* Hero Platform Logos */
@@ -706,6 +718,15 @@ footer::before {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes shimmer-landing {
+  0% {
+    background-position: -120% center;
+  }
+  100% {
+    background-position: 100% center;
   }
 }
 
