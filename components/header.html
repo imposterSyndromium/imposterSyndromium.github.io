@@ -1,76 +1,23 @@
-<!-- 
-  Header Component
-  
-  This header component is dynamically loaded into all pages via header-include.js.
-  Contains:
-  - Site message banner (populated dynamically from data/site-message.txt)
-  - Main navigation with dropdown menus
-  - Logo with image and text
-  - Mobile menu button
-  
-  Note: Image path uses absolute path which may break on subdirectory pages.
-  TODO: Consider making image path relative or using path calculation similar to header-include.js
--->
-
-<!-- Site Message Banner: Displayed only when site-message.txt contains content -->
-<!-- This div is populated dynamically by header-include.js and starts hidden -->
 <div id="site-message" class="site-message" style="display: none;"></div>
 
-<!-- Navigation Header: Fixed position navigation bar -->
 <header>
-  <nav class="main-nav">
+  <nav class="main-nav" aria-label="Main navigation">
     <div class="container">
-      <!-- Logo Section: Links to home page -->
       <div class="logo">
-        <a href="/index.html">
-          <!-- Logo Image: Note - absolute path may break on subdirectory pages -->
-          <img src="/images/robin.png?v=1.1.4" alt="Robin O'Brien" class="logo-img">
+        <a href="/index.html" aria-label="Robin O'Brien, home">
+          <img src="/images/robin.png?v=1.1.4" alt="" class="logo-img">
           <span class="logo-text">Robin O'Brien</span>
         </a>
       </div>
-      <!-- Main Navigation Links: Flat menu structure -->
       <ul class="nav-links">
-        <!-- About: Main section link -->
-        <li class="nav-item">
-          <a href="/index.html#about">About</a>
-        </li>
-        <!-- Skills & Experience: Direct link -->
-        <li class="nav-item">
-          <a href="/pages/highlights/featured-projects.html">Skills & Experience</a>
-        </li>
-        <!-- Apps: Direct link to independent apps page -->
-        <li class="nav-item">
-          <a href="/pages/apps.html">Apps</a>
-        </li>
-        <!-- Education & Achievements: Direct link -->
-        <li class="nav-item">
-          <a href="/pages/highlights/awards.html">Education & Achievements</a>
-        </li>
-        <!-- Resume: Direct link to resume page -->
-        <li class="nav-item">
-          <a href="/pages/resume.html">Resume</a>
-        </li>
-        <!-- Blog Dropdown: Main section link with submenu -->
-        <li class="nav-item dropdown">
-          <a href="/index.html#blog">Blog</a>
-          <ul class="dropdown-menu">
-            <li><a href="/pages/blog.html">All Posts</a></li>
-            <li><a href="/pages/blog.html">Recent Posts</a></li>
-            <li><a href="/pages/blog.html">Categories</a></li>
-          </ul>
-        </li>
-        <!-- Contact Dropdown: Main section link with submenu -->
-        <li class="nav-item dropdown">
-          <a href="/index.html#contact">Contact</a>
-          <ul class="dropdown-menu">
-            <li><a href="/pages/social-links.html">Email</a></li>
-            <li><a href="/pages/social-links.html">Social Links</a></li>
-            <li><a href="https://github.com/imposterSyndromium/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-          </ul>
-        </li>
+        <li class="nav-item"><a href="/index.html#work">Work</a></li>
+        <li class="nav-item"><a href="/pages/apps.html">Apps</a></li>
+        <li class="nav-item"><a href="/index.html#experience">Experience</a></li>
+        <li class="nav-item"><a href="/pages/resume.html">Résumé</a></li>
+        <li class="nav-item"><a href="/pages/blog.html">Writing</a></li>
+        <li class="nav-item"><a href="/index.html#contact">Contact</a></li>
       </ul>
-      <!-- Mobile Menu Button: Toggles navigation menu on mobile devices -->
-      <button class="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">☰</button>
+      <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
     </div>
   </nav>
-</header> 
+</header>

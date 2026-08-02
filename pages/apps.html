@@ -3,110 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Independent apps by Robin O'Brien — Inner Whisper, live on the App Store under Moving Truth, and the rest of the Inner family.">
-  <title>Independent Apps - Robin O'Brien</title>
-  <link rel="stylesheet" href="../css/styles.css?v=1.1.4">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Independent apps by Robin O'Brien and Moving Truth: private, accessible software made around real human needs.">
+  <title>Apps — Robin O'Brien</title>
+  <link rel="stylesheet" href="../css/styles.css?v=1.2.0">
 </head>
 <body>
-  <!-- Header will be included here by header-include.js -->
+  <!-- Shared navigation is loaded by header-include.js -->
 
   <main>
-    <section class="section">
+    <section class="page-hero app-page-hero" aria-labelledby="apps-title">
+      <div class="container narrow-container">
+        <a href="../index.html#work" class="back-link"><span aria-hidden="true">←</span> Back to selected work</a>
+        <p class="eyebrow">Moving Truth · Independent apps</p>
+        <h1 id="apps-title">Small apps built around human needs.</h1>
+        <p class="page-lede">Moving Truth is where I build software on my own terms: calm, useful, private by design, and accessible from the beginning. One app is live. Four more are taking shape.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="featured-app-title">
       <div class="container">
-        <h1>Independent Apps</h1>
-        <p class="blog-intro" style="text-align: center; margin-bottom: 3rem;">Software I design, build, and ship on my own — self-taught, published under my own label, Moving Truth.</p>
-
-        <div class="content">
-          <!-- Moving Truth intro -->
-          <div class="card" style="grid-column: 1 / -1; max-width: 100%; cursor: default; margin-bottom: 3rem;">
-            <h3>Moving Truth</h3>
-            <p>Moving Truth is my own independent app label. Every app under it follows the same principles: human first, private by design, accessible from the beginning. It's where I ship the software I build outside of client and employer work — currently one app live, four more in progress.</p>
-            <p style="margin-top: 1rem;"><a href="https://apps.movingtruth.com" target="_blank" rel="noopener noreferrer" style="color: var(--secondary-color);">apps.movingtruth.com →</a></p>
-          </div>
-
-          <!-- Inner Whisper: flagship shipped app -->
-          <div style="margin-bottom: 3rem;">
-            <h2>Inner Whisper</h2>
-            <div class="story-card">
-              <h3>Live on the App Store<span class="badge badge--live" style="margin-left: 0.75rem;">Live</span></h3>
-              <p class="story-highlight">iOS &middot; SwiftUI &middot; Moving Truth</p>
-              <div class="story-details">
-                <p>A native iOS app delivering curated quotes with favorites, custom theming, configurable notifications, and on-device encryption for sensitive settings. Offline-first, self-taught Swift &amp; SwiftUI from the ground up, independently designed, built, and published solo.</p>
-                <ul style="list-style-type: disc; margin-left: 1.5rem; margin-top: 1rem;">
-                  <li>Curated quote library with favorites</li>
-                  <li>Custom theming</li>
-                  <li>Configurable notifications</li>
-                  <li>On-device encryption for sensitive settings</li>
-                  <li>Offline-first, no account required</li>
-                </ul>
-                <p style="margin-top: 1.5rem;">
-                  <a href="https://apps.apple.com/ca/app/inner-whisper/id6760204122" target="_blank" rel="noopener noreferrer" class="resume-button" style="display: inline-block; padding: 0.6rem 1.2rem; background-color: var(--primary-color); color: white; text-decoration: none; border-radius: 8px; font-weight: 500;">Get it on the App Store</a>
-                  <a href="https://inner-whisper.movingtruth.com" target="_blank" rel="noopener noreferrer" style="margin-left: 1rem; color: var(--secondary-color);">inner-whisper.movingtruth.com →</a>
-                </p>
-              </div>
+        <article class="featured-app">
+          <div class="featured-app__number" aria-hidden="true">01</div>
+          <div class="featured-app__body">
+            <div class="work-card__meta"><span class="status-pill status-pill--live">Available now</span><span>iPhone · SwiftUI</span></div>
+            <h2 id="featured-app-title">Inner Whisper</h2>
+            <p class="featured-app__tagline">Words to return to when you need them.</p>
+            <p>Inner Whisper is a private, offline-first collection of meaningful quotes. Save favourites, shape the experience with themes and reminders, and add personal words with on-device protection—without creating an account.</p>
+            <ul class="feature-list" aria-label="Inner Whisper features">
+              <li>Curated quote library and favourites</li>
+              <li>Custom themes and thoughtful reminders</li>
+              <li>Personal entries protected on device</li>
+              <li>Designed to work offline</li>
+            </ul>
+            <div class="button-row">
+              <a href="https://apps.apple.com/ca/app/inner-whisper/id6760204122" target="_blank" rel="noopener noreferrer" class="button button--primary">View on the App Store</a>
+              <a href="https://inner-whisper.movingtruth.com" target="_blank" rel="noopener noreferrer" class="button button--secondary">Visit the app site</a>
             </div>
           </div>
+        </article>
+      </div>
+    </section>
 
-          <!-- The Inner Family -->
-          <div style="margin-bottom: 3rem;">
-            <h2>The Inner Family</h2>
-            <p style="text-align: center; margin-bottom: 2rem; color: var(--light-text);">Inner Whisper is the first of five apps under the same label — the rest are in progress.</p>
-            <div class="product-grid">
-              <div class="product-card" onclick="window.open('https://inner-thought.movingtruth.com', '_blank', 'noopener,noreferrer')">
-                <h3>Inner Thought<span class="badge badge--soon">Coming Soon</span></h3>
-                <p>Part of the Inner family, currently in development.</p>
-              </div>
-              <div class="product-card" onclick="window.open('https://inner-sign.movingtruth.com', '_blank', 'noopener,noreferrer')">
-                <h3>Inner Sign<span class="badge badge--soon">Coming Soon</span></h3>
-                <p>Part of the Inner family, currently in development.</p>
-              </div>
-              <div class="product-card" onclick="window.open('https://inner-course.movingtruth.com', '_blank', 'noopener,noreferrer')">
-                <h3>Inner Course<span class="badge badge--soon">Coming Soon</span></h3>
-                <p>Part of the Inner family, currently in development.</p>
-              </div>
-              <div class="product-card" onclick="window.open('https://inner-play.movingtruth.com', '_blank', 'noopener,noreferrer')">
-                <h3>Inner Play<span class="badge badge--soon">Coming Soon</span></h3>
-                <p>Part of the Inner family, currently in development.</p>
-              </div>
-            </div>
-          </div>
+    <section class="section section--soft" aria-labelledby="in-progress-title">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">In development</p><h2 id="in-progress-title">The Inner family</h2></div>
+          <p class="section-heading__copy">Different needs. The same promise: technology that respects the person using it.</p>
         </div>
+        <div class="app-grid">
+          <article class="app-card">
+            <div class="app-card__top"><span class="app-card__number">02</span><span class="status-pill">In development</span></div>
+            <h3>Inner Thought</h3>
+            <p>One gesture to catch a spoken thought before it disappears—saved privately as searchable text, with the original voice close by.</p>
+            <a href="https://inner-thought.movingtruth.com" target="_blank" rel="noopener noreferrer" class="text-link">Visit project site <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="app-card">
+            <div class="app-card__top"><span class="app-card__number">03</span><span class="status-pill">In development</span></div>
+            <h3>Inner Sign</h3>
+            <p>A personal daily reading built from traditional systems, transparent formulas, and deeper reference material—not a black box pretending certainty.</p>
+            <a href="https://inner-sign.movingtruth.com" target="_blank" rel="noopener noreferrer" class="text-link">Visit project site <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="app-card">
+            <div class="app-card__top"><span class="app-card__number">04</span><span class="status-pill">In development</span></div>
+            <h3>Inner Course</h3>
+            <p>Lessons and reflection without streaks, scores, or pressure. Progress is measured in what you notice and carry forward.</p>
+            <a href="https://inner-course.movingtruth.com" target="_blank" rel="noopener noreferrer" class="text-link">Visit project site <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="app-card">
+            <div class="app-card__top"><span class="app-card__number">05</span><span class="status-pill">In development</span></div>
+            <h3>Inner Play</h3>
+            <p>Tactile sensory play through dimensional fidgets, sound, and haptics—made for focus and feeling, with no scores to chase.</p>
+            <a href="https://inner-play.movingtruth.com" target="_blank" rel="noopener noreferrer" class="text-link">Visit project site <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="principles-title">
+      <div class="container principles-panel">
+        <div><p class="eyebrow">What stays constant</p><h2 id="principles-title">Human first, all the way down.</h2></div>
+        <ul class="principles-list">
+          <li><strong>Private by design</strong><span>Collect less. Keep control close to the person.</span></li>
+          <li><strong>Accessible from the beginning</strong><span>Access is part of the architecture, not a final checklist.</span></li>
+          <li><strong>No attention traps</strong><span>No manufactured urgency, streak pressure, or engagement games.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container callout-panel">
+        <div><p class="eyebrow">The full family</p><h2>See Moving Truth on its own ground.</h2><p>Each app has a dedicated home, with more detail as it moves toward release.</p></div>
+        <a href="https://apps.movingtruth.com" target="_blank" rel="noopener noreferrer" class="button button--primary">Visit apps.movingtruth.com</a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>About</h3>
-          <p>IT Specialist &amp; Independent Software Developer.</p>
-        </div>
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="../index.html#about">About</a></li>
-            <li><a href="../index.html#apps">Apps</a></li>
-            <li><a href="../index.html#resume">Resume</a></li>
-            <li><a href="../index.html#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Connect</h3>
-          <div class="social-links">
-            <a href="https://github.com/imposterSyndromium/" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="mailto:robin@robinobrien.me">Email</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Robin O'Brien. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../js/header-include.js?v=1.1.4" defer></script>
-  <script src="../js/script.js?v=1.1.4" defer></script>
+  <script src="../js/header-include.js?v=1.2.0" defer></script>
+  <script src="../js/footer-include.js?v=1.2.0" defer></script>
+  <script src="../js/script.js?v=1.2.0" defer></script>
 </body>
 </html>

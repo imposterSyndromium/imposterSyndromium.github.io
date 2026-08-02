@@ -31,31 +31,20 @@ document.addEventListener('DOMContentLoaded', function() {
      * Get the current script's path to determine page depth
      * @type {string}
      */
-    const scripts = document.getElementsByTagName('script');
-    const currentScript = Array.from(scripts).find(script => script.src.includes('footer-include.js'));
-    const scriptPath = currentScript ? currentScript.src : '';
-    
     /**
      * Calculate the correct path to the components directory
      * Handles both root-level pages and nested subdirectory pages
      * @type {string}
      */
     let footerPath = '/components/footer.html';
-    if (scriptPath.includes('/pages/')) {
-        // If we're in a subdirectory, adjust the path relative to root
-        const depth = (scriptPath.match(/\/pages\//g) || []).length;
-        footerPath = '../'.repeat(depth) + 'components/footer.html';
-    }
     // Cache-busting with version number
-    footerPath += '?v=1.0.1';
+    footerPath += '?v=1.2.0';
     
     /**
      * Calculate the base path for relative links and images
      * @type {string}
      */
-    const basePath = scriptPath.includes('/pages/') 
-        ? '../'.repeat((scriptPath.match(/\/pages\//g) || []).length)
-        : '';
+    const basePath = '/';
     
     /**
      * Include footer component
@@ -84,13 +73,14 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div class="footer-content">
                                 <div class="footer-section">
                                     <h3>About</h3>
-                                    <p>IT Specialist & Application Developer with 13+ years of experience.</p>
+                                    <p>Independent software developer and IT specialist.</p>
                                 </div>
                                 <div class="footer-section">
                                     <h3>Quick Links</h3>
                                     <ul>
-                                        <li><a href="${basePath}index.html#about">About</a></li>
-                                        <li><a href="${basePath}index.html#projects">Projects</a></li>
+                                        <li><a href="${basePath}index.html#work">Work</a></li>
+                                        <li><a href="${basePath}pages/apps.html">Apps</a></li>
+                                        <li><a href="${basePath}pages/resume.html">Résumé</a></li>
                                         <li><a href="${basePath}index.html#contact">Contact</a></li>
                                     </ul>
                                 </div>
@@ -103,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </div>
                             </div>
                             <div class="footer-bottom">
-                                <p>&copy; 2025 Robin O'Brien. All rights reserved.</p>
+                                <p>&copy; 2026 Robin O'Brien. All rights reserved.</p>
                             </div>
                         </div>
                     </footer>
@@ -133,11 +123,15 @@ function insertFooter(footerHtml, basePath) {
      * Resolve footer navigation links based on page depth
      */
     const linkMap = {
-        'about': basePath ? `${basePath}index.html#about` : '#about',
+        'about': `${basePath}index.html#about`,
+        'work': `${basePath}index.html#work`,
+        'apps': `${basePath}pages/apps.html`,
+        'experience': `${basePath}index.html#experience`,
         'featured-projects': `${basePath}pages/highlights/featured-projects.html`,
         'awards': `${basePath}pages/highlights/awards.html`,
-        'resume': basePath ? `${basePath}index.html#resume` : '#resume',
-        'contact': basePath ? `${basePath}index.html#contact` : '#contact'
+        'resume': `${basePath}pages/resume.html`,
+        'writing': `${basePath}pages/blog.html`,
+        'contact': `${basePath}index.html#contact`
     };
     
     // Update all footer links
@@ -170,4 +164,3 @@ function insertFooter(footerHtml, basePath) {
     // Insert footer before closing body tag
     document.body.insertAdjacentHTML('beforeend', footer.outerHTML);
 }
-

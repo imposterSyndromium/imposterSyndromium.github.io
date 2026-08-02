@@ -1,294 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Character encoding for proper text rendering -->
   <meta charset="UTF-8">
-  <!-- Responsive viewport settings for mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- SEO meta description -->
-  <meta name="description" content="About Robin O'Brien - Software Developer, Technology Enthusiast, and Creative Problem Solver">
-  <!-- SEO meta keywords -->
-  <meta name="keywords" content="robin obrien, software developer, portfolio, about me, technology, programming">
-  <!-- Page title -->
-  <title>Robin O'Brien - About Me</title>
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=1.1.4">
-  <!-- Google Fonts - Inter font family -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Robin O'Brien is an independent software developer and longtime IT specialist building dependable systems, useful apps, and practical automation.">
+  <title>Robin O'Brien — Software Developer &amp; IT Specialist</title>
+  <link rel="stylesheet" href="css/styles.css?v=1.2.0">
 </head>
-
 <body>
-  <!-- Header will be dynamically included here by header-include.js -->
-  
-  <!-- Main content area -->
+  <!-- Shared navigation is loaded by header-include.js -->
+
   <main>
-    <!-- Hero Section: Main landing area with call-to-action -->
-    <section class="hero" aria-label="Hero section">
-      <div class="container">
-        <h1>IT Systems Administrator. Independent Software Developer.</h1>
-        <p>13+ years running enterprise IT for a global manufacturer — Windows, Active Directory, virtualization, cybersecurity incident response. Now building and shipping software on my own, self-taught, from the ground up.</p>
-        <p>I learn by building and I ship what I build. That's the same instinct either way: administrator's discipline, developer's drive, Kaizen mind underneath both.</p>
-        <!-- Platform Logos -->
-        <div class="hero-platform-logos">
-          <div class="platform-logo" title="Microsoft Windows">
-            <svg viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 12.402L37.58 7.215V41.975H0V12.402ZM0 50.955H37.58V81.189L0 75.985V50.955ZM41.872 7.273L88 2.11V41.975H41.872V7.273ZM88 50.955V87.89L41.872 82.727V50.955H88Z" fill="currentColor"/>
-            </svg>
-          </div>
-          <div class="platform-logo" title="Apple macOS">
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-            </svg>
-          </div>
-          <div class="platform-logo" title="Linux">
-            <img src="images/tux.png?v=1.1.4" alt="Linux Tux" />
-          </div>
-          <div class="platform-logo" title="Android">
-            <img src="images/android.png?v=1.1.4" alt="Android Robot" />
-          </div>
+    <section class="hero portfolio-hero" aria-labelledby="hero-title">
+      <div class="container portfolio-hero__inner">
+        <p class="eyebrow">Independent software developer · IT specialist</p>
+        <h1 id="hero-title">I build the systems behind the work—and the apps beyond it.</h1>
+        <p class="hero-lede">For fourteen years, I kept technology moving inside a manufacturing environment and built the software the floor depended on. Today, I bring that same practical discipline to independent apps under Moving Truth.</p>
+        <div class="button-row button-row--center">
+          <a href="#work" class="button button--primary">Explore my work</a>
+          <a href="pages/resume.html" class="button button--secondary">View résumé</a>
         </div>
-        <!-- Call-to-action button linking to about section -->
-        <a href="#about" class="cta-button" role="button">Learn more about me</a>
+        <dl class="proof-strip" aria-label="Career highlights">
+          <div><dt>14 years</dt><dd>Enterprise IT</dd></div>
+          <div><dt>1 shipped</dt><dd>App Store release</dd></div>
+          <div><dt>End to end</dt><dd>Idea to production</dd></div>
+        </dl>
       </div>
     </section>
 
-    <!-- About Section: Personal introduction and background -->
-    <section id="about" class="section" aria-label="About section">
-      <div class="container">
-        <h2>About Me</h2>
-        <div class="card-grid">
-          <!-- Professional Summary Card -->
-          <div class="card" style="grid-column: 1 / -1; max-width: 100%;">
-            <h3>Systems Administrator & Independent Software Developer</h3>
-            <p>I bridge the gap between factory floor and business systems. For 13+ years at Toyota Boshoku (2012–2026), I built reliable VB.NET applications that actually got used in production—PLC integration systems that pulled real-time data from the factory floor, automated reporting solutions that turned hours of manual work into minutes, and bulletproof 24/7 systems that kept production running.</p>
-            <p style="margin-top: 1rem;">My specialty: taking messy production data and turning it into actionable insights. I understand both the technical side (VB.NET, SQL Server, industrial protocols) and the operational side (manufacturing processes, quality tracking, what operators actually need). This hybrid perspective lets me build solutions that are practical, maintainable, and solve real problems.</p>
-            <p style="margin-top: 1rem;">In May 2026 I left that role to build software independently, full-time. I taught myself Swift and SwiftUI entirely outside formal training and shipped <strong>Inner Whisper</strong>, a native iOS app now live on the App Store, under my own label, <a href="https://apps.movingtruth.com" target="_blank" rel="noopener noreferrer" style="color: var(--secondary-color);">Moving Truth</a>. AI tools are core to how I build now — I use them daily, and I'm currently designing a framework to orchestrate multiple AI agents from different providers on shared tasks.</p>
-            <p style="margin-top: 1rem;"><strong>Core Technologies:</strong> VB.NET • Swift & SwiftUI • SQL Server • PLC Integration (OPC/Modbus) • SSRS • Industrial Automation</p>
-            <p style="margin-top: 0.5rem; color: var(--secondary-color);"><strong>Currently:</strong> Independent Software Developer, Moving Truth (May 2026 – Present) · Previously IT Specialist, Toyota Boshoku (2012 – 2026, 14 years)</p>
-          </div>
-          <!-- Programming Languages Card -->
-          <div class="card" role="button" tabindex="0" onclick="window.location.href='pages/highlights/featured-projects.html'" onkeydown="if(event.key === 'Enter') window.location.href='pages/highlights/featured-projects.html'" style="grid-column: 1 / -1; max-width: 100%; cursor: pointer;">
-            <h3>Programming Languages & Technologies</h3>
-            <p>VB.NET • SQL • C# • Python • Jython (Ignition) • Swift • SwiftUI • SSRS • VBA • ZPL • ZPL II • C++ (Arduino)</p>
-          </div>
-          <!-- Skills Card: Navigate to skills/experience page -->
-          <div class="card" role="button" tabindex="0" onclick="window.location.href='pages/highlights/featured-projects.html'" onkeydown="if(event.key === 'Enter') window.location.href='pages/highlights/featured-projects.html'">
-            <h3>Skills & Experience</h3>
-            <p>PLC Integration, SQL Server, Windows/macOS/Linux Administration, SSRS Development, Cybersecurity, and more.</p>
-          </div>
-          <!-- Projects Card: Navigate to projects page -->
-          <div class="card" role="button" tabindex="0" onclick="window.location.href='pages/highlights/success-stories.html'" onkeydown="if(event.key === 'Enter') window.location.href='pages/highlights/success-stories.html'">
-            <h3>Key Projects</h3>
-            <p>KPI tracking systems, Health & Safety applications, PLC integration solutions, automated reporting, and production data processing systems.</p>
-          </div>
-          <!-- Education Card: Navigate to education/achievements page -->
-          <div class="card" role="button" tabindex="0" onclick="window.location.href='pages/highlights/awards.html'" onkeydown="if(event.key === 'Enter') window.location.href='pages/highlights/awards.html'">
-            <h3>Education & Development</h3>
-            <p>Network Engineering & System Administration (Conestoga College). Currently pursuing Ignition Platform certification.</p>
-          </div>
+    <div class="motto-band" aria-label="Make Change. Be Swift. Think Different.">
+      <div class="container motto-band__inner">
+        <span>Make Change.</span>
+        <span>Be Swift.</span>
+        <span>Think Different.</span>
+      </div>
+    </div>
+
+    <section id="about" class="section narrative-section" aria-labelledby="about-title">
+      <div class="container narrow-container">
+        <p class="eyebrow">The through line</p>
+        <h2 id="about-title">I make complicated things useful.</h2>
+        <div class="lead-copy">
+          <p>My career began in enterprise IT, where “working” meant more than passing a demo. Systems had to survive the factory floor, support real people, and keep running when the stakes were high.</p>
+          <p>That shaped the developer I am now: curious enough to teach myself new platforms, disciplined enough to ship, and practical enough to start with the person who will actually use what I build.</p>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section: Portfolio and featured work -->
-    <section id="projects" class="section">
+    <section id="work" class="section section--soft" aria-labelledby="work-title">
       <div class="container">
-        <h2>Featured Projects</h2>
-        <div class="product-grid">
-          <!-- Custom Applications Card: Navigate to projects page -->
-          <div class="product-card" onclick="window.location.href='pages/highlights/success-stories.html'">
-            <h3>PLC Integration System</h3>
-            <p><strong>Real-time production visibility where none existed before.</strong> Built VB.NET application that connects to factory floor PLCs, capturing production counts, machine status, and quality data automatically. Eliminated manual data entry errors and gave management instant visibility into production status.</p>
-            <p style="margin-top: 0.75rem; font-size: 0.9rem; opacity: 0.9;"><strong>Technologies:</strong> VB.NET, SQL Server, OPC/Modbus protocols, industrial PLCs</p>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Selected work</p>
+            <h2 id="work-title">Built in two worlds.</h2>
           </div>
-          <!-- Industrial Integration Card: Navigate to industrial projects page -->
-          <div class="product-card" onclick="window.location.href='pages/products/hardware-products.html'">
-            <h3>Automated Reporting System</h3>
-            <p><strong>Transformed hours of manual work into minutes.</strong> Replaced labor-intensive Excel-based reporting with automated SSRS solution. Daily production reports that took 2-4 hours of manual compilation now generate automatically in under 5 minutes with zero errors.</p>
-            <p style="margin-top: 0.75rem; font-size: 0.9rem; opacity: 0.9;"><strong>Technologies:</strong> SQL Server, SSRS, VB.NET, scheduled automation</p>
-          </div>
-          <!-- Reporting & Analytics Card: Navigate to analytics page -->
-          <div class="product-card" onclick="window.location.href='pages/products/software-solutions.html'">
-            <h3>24/7 Production Systems</h3>
-            <p><strong>Built for reliability in manufacturing environments.</strong> Custom business applications running continuously in production—KPI dashboards, Health & Safety tracking, inventory systems. Designed with robust error handling, monitoring, and uptime that manufacturing demands.</p>
-            <p style="margin-top: 0.75rem; font-size: 0.9rem; opacity: 0.9;"><strong>Focus:</strong> System stability, error handling, production-grade reliability</p>
-          </div>
+          <a href="pages/highlights/featured-projects.html" class="text-link">See technical experience <span aria-hidden="true">→</span></a>
         </div>
-      </div>
-    </section>
 
-    <!-- Apps Section: Independent iOS apps -->
-    <section id="apps" class="section">
-      <div class="container">
-        <h2>Independent Apps</h2>
-        <p class="section-intro" style="text-align: center; margin-bottom: 3rem;">Software I design, build, and ship on my own — self-taught, published under my own label, Moving Truth.</p>
-        <div class="product-grid">
-          <!-- Inner Whisper: flagship shipped app -->
-          <div class="product-card" style="cursor: default;">
-            <h3>Inner Whisper<span class="badge badge--live">Live</span></h3>
-            <p>A native SwiftUI iOS app delivering curated quotes with favorites, custom theming, configurable notifications, and on-device encryption for sensitive settings. Offline-first.</p>
-            <p style="margin-top: 0.75rem; font-size: 0.9rem; opacity: 0.9;">
-              <a href="https://apps.apple.com/ca/app/inner-whisper/id6760204122" target="_blank" rel="noopener noreferrer" style="color: var(--secondary-color);">Get it on the App Store</a>
-              &middot;
-              <a href="https://apps.movingtruth.com" target="_blank" rel="noopener noreferrer" style="color: var(--secondary-color);">apps.movingtruth.com</a>
-            </p>
-          </div>
-          <!-- Inner Thought: next app in the Moving Truth family -->
-          <div class="product-card" onclick="window.open('https://inner-thought.movingtruth.com', '_blank', 'noopener,noreferrer')">
-            <h3>Inner Thought<span class="badge badge--soon">Coming Soon</span></h3>
-            <p>Next in the Inner family, published under Moving Truth — currently in development.</p>
-          </div>
-        </div>
-        <p style="text-align: center; margin-top: 2rem;">
-          <a href="pages/apps.html" class="cta-button" role="button">View all apps →</a>
-        </p>
-      </div>
-    </section>
-
-    <!-- Resume Section: Resume download and contact information -->
-    <section id="resume" class="section">
-      <div class="container">
-        <h2>Resume & Contact</h2>
-        <div class="download-grid">
-          <!-- Resume Card: View and download resume -->
-          <div class="download-card" onclick="window.location.href='pages/resume.html'">
-            <h3>View & Download Resume</h3>
-            <p>View my resume online or download a PDF copy</p>
-          </div>
-          <!-- Contact Card: Get in touch -->
-          <div class="download-card" onclick="window.location.href='pages/social-links.html'">
-            <h3>Get In Touch</h3>
-            <p>Email: robin@robinobrien.me<br>Let's connect and discuss new opportunities!</p>
-          </div>
-          <!-- Social Links Card: Connect on social media -->
-          <div class="download-card" onclick="window.location.href='pages/social-links.html'">
-            <h3>Social Links</h3>
-            <p>Connect with me on GitHub or email me directly</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Blog Section: Articles and thoughts -->
-    <section id="blog" class="section">
-      <div class="container">
-        <h2>Blog & Articles</h2>
-        <div class="update-grid">
-          <!-- Blog Card: Navigate to blog page -->
-          <div class="update-card" onclick="window.location.href='pages/blog.html'">
-            <h3>Recent Posts</h3>
-            <p>Read my latest thoughts on technology, development practices, and life as a developer.</p>
-          </div>
-          <!-- Tutorials Card: Navigate to blog page -->
-          <div class="update-card" onclick="window.location.href='pages/blog.html'">
-            <h3>Tutorials</h3>
-            <p>Learning resources and guides to share knowledge with the community.</p>
-          </div>
-          <!-- Thoughts Card: Navigate to blog page -->
-          <div class="update-card" onclick="window.location.href='pages/blog.html'">
-            <h3>Thoughts & Insights</h3>
-            <p>Personal reflections on software development, career growth, and technology trends.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section" aria-label="Contact section">
-      <div class="container">
-        <h2>Let's Connect</h2>
-        <div class="support-grid">
-          <!-- Email Card: Contact information -->
-          <div class="support-card" role="button" tabindex="0" onclick="window.location.href='mailto:robin@robinobrien.me'" onkeydown="if(event.key === 'Enter') window.location.href='mailto:robin@robinobrien.me'">
-            <div class="support-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
+        <div class="work-grid">
+          <article class="work-card work-card--feature">
+            <div class="work-card__meta"><span class="status-pill status-pill--live">Live</span><span>iOS · SwiftUI</span></div>
+            <h3>Inner Whisper</h3>
+            <p>A quiet, private place for the words that help people keep going. I designed, built, and published the app independently under Moving Truth.</p>
+            <div class="tag-list" aria-label="Inner Whisper features">
+              <span>Offline first</span><span>On-device privacy</span><span>Accessible</span>
             </div>
-            <h3>Email</h3>
-            <p>Send me an email for collaborations, opportunities, or just to say hello.<br><strong>robin@robinobrien.me</strong></p>
-          </div>
-          <!-- Phone Card: Contact information -->
-          <!-- Phone contact removed -->
-          <!-- GitHub Card: Open source contributions -->
-          <div class="support-card" role="button" tabindex="0" onclick="window.open('https://github.com/imposterSyndromium/', '_blank', 'noopener,noreferrer')" onkeydown="if(event.key === 'Enter') window.open('https://github.com/imposterSyndromium/', '_blank', 'noopener,noreferrer')">
-            <div class="support-card-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-              </svg>
+            <div class="button-row">
+              <a href="https://apps.apple.com/ca/app/inner-whisper/id6760204122" target="_blank" rel="noopener noreferrer" class="button button--primary">View on the App Store</a>
+              <a href="pages/apps.html" class="button button--quiet">All apps</a>
             </div>
-            <h3>GitHub</h3>
-            <p>Check out my code repositories and open source contributions.<br><strong>github.com/imposterSyndromium/</strong></p>
-          </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-card__meta"><span>Manufacturing systems</span><span>VB.NET · SQL Server</span></div>
+            <h3>Factory-floor software</h3>
+            <p>Production applications, KPI dashboards, reporting, inventory tools, and PLC integrations designed for the people and processes that relied on them every day.</p>
+            <a href="pages/highlights/success-stories.html" class="text-link">Explore the projects <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="work-card">
+            <div class="work-card__meta"><span>Current research &amp; development</span><span>AI orchestration</span></div>
+            <h3>Human-governed AI systems</h3>
+            <p>Exploring how multiple AI tools can work together under clear human authority, durable memory, evidence, and review—without confusing automation with permission.</p>
+            <a href="pages/resume.html" class="text-link">See the broader profile <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section" aria-labelledby="experience-title">
+      <div class="container experience-layout">
+        <div class="experience-intro">
+          <p class="eyebrow">Experience</p>
+          <h2 id="experience-title">A builder’s career, not a collection of titles.</h2>
+          <p>Systems administration taught me reliability. Manufacturing taught me consequence. Independent development taught me to own the whole journey from idea to release.</p>
+          <a href="pages/resume.html" class="button button--secondary">Read the résumé</a>
+        </div>
+        <ol class="timeline">
+          <li>
+            <div class="timeline__date">2026—Now</div>
+            <div><h3>Independent Software Developer</h3><p>Moving Truth</p><p>Designing and shipping privacy-conscious apps while developing new approaches to AI-assisted work.</p></div>
+          </li>
+          <li>
+            <div class="timeline__date">2012—2026</div>
+            <div><h3>IT Specialist</h3><p>Toyota Boshoku</p><p>Enterprise support, cybersecurity response, infrastructure, reporting, and custom software for office and production teams.</p></div>
+          </li>
+          <li>
+            <div class="timeline__date">2010—2011</div>
+            <div><h3>Network Engineering &amp; System Administration</h3><p>Conestoga College</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="writing" class="section section--soft" aria-labelledby="writing-title">
+      <div class="container callout-panel">
+        <div>
+          <p class="eyebrow">Writing</p>
+          <h2 id="writing-title">Notes from the work.</h2>
+          <p>I write about technology, problem-solving, learning in public, and the ideas that keep changing how I build.</p>
+        </div>
+        <a href="pages/blog.html" class="button button--secondary">Read the blog</a>
+      </div>
+    </section>
+
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container contact-panel">
+        <p class="eyebrow">Start a conversation</p>
+        <h2 id="contact-title">Have a problem worth untangling?</h2>
+        <p>I’m open to thoughtful collaborations, practical software work, and conversations about what technology can do when it stays grounded in people.</p>
+        <div class="button-row button-row--center">
+          <a href="mailto:robin@robinobrien.me" class="button button--primary">Email me</a>
+          <a href="https://github.com/imposterSyndromium/" target="_blank" rel="noopener noreferrer" class="button button--secondary">GitHub</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer: Site information, quick links, and social media -->
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <!-- About section -->
-        <div class="footer-section">
-          <h3>About</h3>
-          <p>IT Specialist & Application Developer with 13+ years of experience in manufacturing IT support and custom application development.</p>
-          <p style="margin-top: 0.5rem; font-size: 0.9rem;">Listowel, ON</p>
-        </div>
-        <!-- Quick Links section: Navigation links to main sections -->
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="pages/highlights/featured-projects.html">Skills & Experience</a></li>
-            <li><a href="#apps">Apps</a></li>
-            <li><a href="pages/highlights/awards.html">Education & Achievements</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <!-- Social Media section: Links to social platforms -->
-        <div class="footer-section">
-          <h3>Connect</h3>
-          <div class="social-links">
-            <a href="https://github.com/imposterSyndromium/" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="mailto:robin@robinobrien.me" aria-label="Email">Email</a>
-          </div>
-        </div>
-      </div>
-      <!-- Copyright notice -->
-      <div class="footer-bottom">
-        <p>&copy; 2026 Robin O'Brien. All rights reserved.</p>
-        <!-- Platform Logos -->
-        <div class="platform-logos">
-          <div class="platform-logo" title="Microsoft Windows">
-            <svg viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 12.402L37.58 7.215V41.975H0V12.402ZM0 50.955H37.58V81.189L0 75.985V50.955ZM41.872 7.273L88 2.11V41.975H41.872V7.273ZM88 50.955V87.89L41.872 82.727V50.955H88Z" fill="currentColor"/>
-            </svg>
-          </div>
-          <div class="platform-logo" title="Apple macOS">
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-            </svg>
-          </div>
-          <div class="platform-logo" title="Linux">
-            <img src="images/tux.png?v=1.1.4" alt="Linux Tux" />
-          </div>
-          <div class="platform-logo" title="Android">
-            <img src="images/android.png?v=1.1.4" alt="Android Robot" />
-          </div>
-          <div class="platform-logo" title="Robin O'Brien">
-            <img src="images/logo.png?v=1.1.4" alt="Robin O'Brien Logo" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JavaScript files loaded with defer attribute for performance -->
-  <!-- header-include.js: Dynamically includes header component and handles site message -->
-  <script src="js/header-include.js?v=1.1.4" defer></script>
-  <!-- script.js: Handles mobile menu, smooth scrolling, and scroll animations -->
-  <script src="js/script.js?v=1.1.4" defer></script>
+  <!-- Shared footer is loaded by footer-include.js -->
+  <script src="js/header-include.js?v=1.2.0" defer></script>
+  <script src="js/footer-include.js?v=1.2.0" defer></script>
+  <script src="js/script.js?v=1.2.0" defer></script>
 </body>
 </html>

@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     // Cache-busting with version number (better for browser caching)
     // Increment this version number when header.html changes
-    headerPath += '?v=1.0.1';
+    headerPath += '?v=1.2.0';
     
     /**
      * Include header component
@@ -91,8 +91,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </button>
                                 <ul class="nav-links">
                                     <li><a href="/">Home</a></li>
-                                    <li><a href="/#about">About</a></li>
-                                    <li><a href="/#projects">Projects</a></li>
+                                    <li><a href="/#work">Work</a></li>
+                                    <li><a href="/pages/apps.html">Apps</a></li>
+                                    <li><a href="/pages/resume.html">Résumé</a></li>
                                     <li><a href="/#contact">Contact</a></li>
                                 </ul>
                             </div>
@@ -249,4 +250,4 @@ function initializeMobileMenu() {
             });
         }
     });
-} 
+}

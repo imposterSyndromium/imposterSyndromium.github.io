@@ -3,163 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Robin O'Brien - Resume - IT Specialist & Application Developer">
-  <title>Resume - Robin O'Brien</title>
-  <link rel="stylesheet" href="../css/styles.css?v=1.1.4">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    .resume-container {
-      background-color: var(--card-bg);
-      border-radius: 12px;
-      padding: 2rem;
-      margin: 2rem 0;
-    }
-    
-    .resume-actions {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-    }
-    
-    .resume-button {
-      display: inline-block;
-      padding: 0.8rem 1.5rem;
-      background-color: var(--primary-color);
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 500;
-      transition: var(--transition);
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-    
-    .resume-button:hover {
-      background-color: var(--secondary-color);
-      transform: translateY(-2px);
-    }
-    
-    .resume-button.secondary {
-      background-color: transparent;
-      border: 1px solid var(--primary-color);
-      color: var(--primary-color);
-    }
-    
-    .resume-button.secondary:hover {
-      background-color: var(--primary-color);
-      color: white;
-    }
-    
-    .resume-viewer {
-      width: 100%;
-      min-height: 800px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      background-color: var(--background);
-    }
-    
-    .resume-info {
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      color: var(--light-text);
-      font-size: 0.9rem;
-    }
-    
-    @media (max-width: 768px) {
-      .resume-viewer {
-        min-height: 600px;
-      }
-      
-      .resume-actions {
-        flex-direction: column;
-      }
-      
-      .resume-button {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  </style>
+  <meta name="description" content="Résumé and professional profile for Robin O'Brien, independent software developer and IT specialist.">
+  <title>Résumé — Robin O'Brien</title>
+  <link rel="stylesheet" href="../css/styles.css?v=1.2.0">
 </head>
 <body>
-  <!-- Header will be included here by header-include.js -->
-  
+  <!-- Shared navigation is loaded by header-include.js -->
+
   <main>
-    <section class="section">
+    <section class="page-hero resume-page-hero" aria-labelledby="resume-title">
+      <div class="container narrow-container">
+        <a href="../index.html#experience" class="back-link"><span aria-hidden="true">←</span> Back to experience</a>
+        <p class="eyebrow">Professional profile</p>
+        <h1 id="resume-title">Practical software. Dependable systems. Fourteen years of making both work.</h1>
+        <p class="page-lede">I’m an independent software developer with a long enterprise IT foundation—equally comfortable tracing a production problem, shaping data into something useful, or carrying an app from first idea to release.</p>
+        <div class="button-row">
+          <a href="../resume/RobinOBrien_Resume_20260802.pdf" download="RobinOBrien_Resume.pdf" class="button button--primary">Download résumé</a>
+          <a href="mailto:robin@robinobrien.me" class="button button--secondary">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="snapshot-title">
       <div class="container">
-        <h1>Resume</h1>
-        <div class="content">
-          <p style="margin-bottom: 1.5rem;">View my resume online or download a copy in PDF format.</p>
-          
-          <div class="resume-container">
-            <div class="resume-actions">
-              <a href="../resume/RobinOBrien_Resume_20260802.pdf" download="RobinOBrien_Resume.pdf" class="resume-button">
-                📄 Download PDF
-              </a>
-              <a href="../resume/RobinOBrien_Resume_20260802.pdf" target="_blank" rel="noopener noreferrer" class="resume-button secondary">
-                🔗 Open in New Tab
-              </a>
-              <a href="../index.html#resume" class="resume-button secondary">
-                ← Back to Home
-              </a>
-            </div>
-            
-            <iframe 
-              src="../resume/RobinOBrien_Resume_20260802.pdf#toolbar=1" 
-              class="resume-viewer"
-              title="Robin O'Brien Resume"
-              aria-label="Resume PDF Viewer">
-              <p>Your browser does not support PDFs. <a href="../resume/RobinOBrien_Resume_20260802.pdf" download>Download the resume</a> instead.</p>
-            </iframe>
-            
-            <div class="resume-info">
-              <p><strong>File:</strong> RobinOBrien_Resume_20260802.pdf</p>
-              <p><strong>Last Updated:</strong> August 2, 2026</p>
-              <p>If the PDF does not display in your browser, you can download it using the button above or open it in a new tab.</p>
-            </div>
+        <h2 id="snapshot-title" class="visually-hidden">Career snapshot</h2>
+        <dl class="proof-strip proof-strip--page">
+          <div><dt>14 years</dt><dd>Manufacturing IT and software</dd></div>
+          <div><dt>Solo shipped</dt><dd>Native iOS app</dd></div>
+          <div><dt>Cross-platform</dt><dd>Windows · Apple · Linux</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="resume-experience-title">
+      <div class="container resume-overview">
+        <div>
+          <p class="eyebrow">Experience</p>
+          <h2 id="resume-experience-title">Where I’ve done the work.</h2>
+        </div>
+        <div class="resume-roles">
+          <article class="resume-role">
+            <div class="resume-role__date">May 2026—Present</div>
+            <h3>Independent Software Developer</h3>
+            <p class="resume-role__org">Moving Truth · Self-employed</p>
+            <p>Designing and shipping native apps, building privacy and accessibility into the product from the start, and developing human-governed approaches to multi-agent AI work.</p>
+          </article>
+          <article class="resume-role">
+            <div class="resume-role__date">Feb 2012—May 2026</div>
+            <h3>IT Specialist</h3>
+            <p class="resume-role__org">Toyota Boshoku · Elmira, Ontario</p>
+            <p>Supported office and production technology while independently building business-critical VB.NET applications, automated reporting, KPI tools, and real-time PLC integrations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="skills-title">
+      <div class="container resume-overview">
+        <div><p class="eyebrow">Capabilities</p><h2 id="skills-title">What I bring.</h2></div>
+        <div class="skill-groups">
+          <div><h3>Software</h3><p>VB.NET · Swift · SwiftUI · C# · SQL · Python · application architecture</p></div>
+          <div><h3>Data &amp; automation</h3><p>SQL Server · SSRS · KPI dashboards · scheduled reporting · process automation</p></div>
+          <div><h3>Systems</h3><p>Windows · macOS · Linux · Active Directory · virtualization · IBM AS/400</p></div>
+          <div><h3>Industrial IT</h3><p>PLC integration · production data · incident response · resilient 24/7 systems</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="document-title">
+      <div class="container">
+        <div class="section-heading resume-document-heading">
+          <div><p class="eyebrow">The document</p><h2 id="document-title">Full résumé</h2></div>
+          <div class="button-row">
+            <a href="../resume/RobinOBrien_Resume_20260802.pdf" download="RobinOBrien_Resume.pdf" class="button button--primary">Download PDF</a>
+            <a href="../resume/RobinOBrien_Resume_20260802.pdf" target="_blank" rel="noopener noreferrer" class="button button--secondary">Open PDF</a>
           </div>
         </div>
+        <iframe src="../resume/RobinOBrien_Resume_20260802.pdf#toolbar=0&amp;navpanes=0" class="resume-viewer" title="Robin O'Brien résumé PDF">
+          <p>Your browser cannot display this PDF. <a href="../resume/RobinOBrien_Resume_20260802.pdf">Download the résumé</a>.</p>
+        </iframe>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>About</h3>
-          <p>IT Specialist & Application Developer with 13+ years of experience.</p>
-        </div>
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="../index.html#about">About</a></li>
-            <li><a href="../index.html#projects">Projects</a></li>
-            <li><a href="../index.html#apps">Apps</a></li>
-            <li><a href="../index.html#resume">Resume</a></li>
-            <li><a href="../index.html#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Connect</h3>
-          <div class="social-links">
-            <a href="https://github.com/imposterSyndromium/" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="mailto:robin@robinobrien.me">Email</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Robin O'Brien. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../js/header-include.js?v=1.1.4" defer></script>
-  <script src="../js/script.js?v=1.1.4" defer></script>
+  <script src="../js/header-include.js?v=1.2.0" defer></script>
+  <script src="../js/footer-include.js?v=1.2.0" defer></script>
+  <script src="../js/script.js?v=1.2.0" defer></script>
 </body>
 </html>
-
-

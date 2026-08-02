@@ -3,277 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <title>Robin O'Brien - Resume</title>
-<!--
-  Source file for the generated resume PDF.
-  Regenerate after editing this file:
-
-  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
-    --headless=new --disable-gpu \
-    --print-to-pdf="../RobinOBrien_Resume_20260802.pdf" \
-    --no-pdf-header-footer \
-    "file://$(pwd)/resume.html"
-
-  Design constraints (do not violate when editing):
-  - Strict single column, real semantic HTML (h1/h2/h3, ul/li, p) — no tables
-    or absolutely-positioned text boxes — this must stay ATS-parseable.
-  - No CSS grid/flexbox placing sibling content side-by-side: Chrome's
-    print-to-pdf text-extraction order follows paint position (roughly
-    top-to-bottom by y-band) rather than DOM order, so a 2-column grid of
-    "heading + paragraph" pairs gets extracted as heading, heading,
-    paragraph, paragraph instead of heading, paragraph, heading, paragraph
-    — verified by generating and running `pdftotext` (no -layout flag) on
-    an early draft. Every section must stack in one true vertical column
-    so extracted text order always matches visual/logical order.
-  - System font stack only, no external font/CDN — keeps headless print
-    deterministic and avoids a font-fetch race.
-  - White background — resumes get parsed/printed on white by most tools.
--->
 <style>
-  @page { size: letter; margin: 0.35in; }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  :root {
-    --ink: #1d1d1f;
-    --muted: #55555a;
-    --accent: #5d27ae;
-    --accent-soft: #8f6ad3;
-    --rule: #e2dcf0;
-  }
-
-  body {
-    font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: var(--ink);
-    font-size: 9.9pt;
-    line-height: 1.26;
-    background: #ffffff;
-  }
-
-  header.resume-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    border-bottom: 2.5px solid var(--accent);
-    padding-bottom: 7px;
-    margin-bottom: 10px;
-  }
-
-  h1 {
-    font-size: 20pt;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-  }
-
-  .title {
-    font-size: 11pt;
-    font-weight: 500;
-    color: var(--accent);
-    margin-top: 1px;
-  }
-
-  .contact-block {
-    text-align: right;
-    font-size: 8.7pt;
-    color: var(--muted);
-    line-height: 1.4;
-  }
-
-  .contact-block a { color: var(--muted); text-decoration: none; }
-
-  section { margin-bottom: 6px; break-inside: avoid; }
-
-  h2 {
-    font-size: 10pt;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--accent);
-    border-left: 3px solid var(--accent);
-    padding-left: 8px;
-    margin-bottom: 5px;
-  }
-
-  p.summary {
-    color: var(--ink);
-    font-size: 9.9pt;
-  }
-
-  .skill-cat { margin-bottom: 3px; }
-
-  .skill-cat h3 {
-    display: inline;
-    font-size: 9.4pt;
-    font-weight: 700;
-    color: var(--ink);
-  }
-
-  .skill-cat p { display: inline; color: var(--muted); font-size: 9.4pt; }
-
-  .entry { margin-bottom: 4px; break-inside: avoid; }
-
-  .entry-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-  }
-
-  .entry-title { font-size: 10.1pt; font-weight: 700; color: var(--ink); }
-
-  .entry-org { font-size: 9.7pt; color: var(--accent-soft); font-weight: 600; }
-
-  .entry-meta { font-size: 8.9pt; color: var(--muted); white-space: nowrap; }
-
-  .entry-sub { font-size: 9pt; color: var(--muted); margin-top: 0; margin-bottom: 0; line-height: 1.22; }
-
-  ul.bullets { list-style: none; }
-
-  ul.bullets li {
-    position: relative;
-    padding-left: 13px;
-    margin-bottom: 0;
-    font-size: 9.4pt;
-    line-height: 1.2;
-  }
-
-  ul.bullets li::before {
-    content: "\2013";
-    position: absolute;
-    left: 0;
-    color: var(--accent-soft);
-  }
-
-  ul.bullets li strong { color: var(--ink); }
-
-  .badge-live {
-    display: inline-block;
-    font-size: 7.6pt;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #fff;
-    background: var(--accent);
-    border-radius: 3px;
-    padding: 1px 6px;
-    margin-left: 6px;
-    vertical-align: middle;
-  }
-
-  .competency { margin-bottom: 3px; }
-  .competency h3 { display: inline; font-size: 9.4pt; font-weight: 700; color: var(--ink); }
-  .competency p { display: inline; font-size: 9.4pt; color: var(--muted); }
-
-  hr.rule { border: none; border-top: 1px solid var(--rule); margin: 10px 0; }
+  @page { size: letter; margin: 0.46in 0.52in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  :root { --ink: #202024; --muted: #5f5f67; --accent: #5d27ae; --soft: #f4f0fa; --rule: #ded8e8; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; color: var(--ink); background: #fff; font-size: 9.35pt; line-height: 1.32; }
+  a { color: inherit; text-decoration: none; }
+  header { padding-bottom: 10px; border-bottom: 2px solid var(--accent); }
+  h1 { margin: 0; font-size: 23pt; line-height: 1; letter-spacing: -0.035em; }
+  .headline { margin-top: 4px; color: var(--accent); font-size: 10.8pt; font-weight: 650; }
+  .contact { margin-top: 5px; color: var(--muted); font-size: 8.45pt; line-height: 1.4; }
+  section { margin-top: 12px; break-inside: avoid; }
+  h2 { margin: 0 0 6px; color: var(--accent); font-size: 9.3pt; font-weight: 750; letter-spacing: 0.105em; text-transform: uppercase; }
+  .profile { margin: 0; font-size: 9.7pt; line-height: 1.4; }
+  .strengths { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 18px; margin: 0; padding: 9px 11px; list-style: none; background: var(--soft); border-radius: 5px; }
+  .strengths li { color: var(--muted); font-size: 8.9pt; }
+  .strengths strong { color: var(--ink); }
+  .role { padding: 0 0 10px; }
+  .role + .role { padding-top: 9px; border-top: 1px solid var(--rule); }
+  .role-head { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: baseline; }
+  h3 { margin: 0; font-size: 10.4pt; line-height: 1.2; }
+  .date { color: var(--muted); font-size: 8.6pt; white-space: nowrap; }
+  .org { margin: 2px 0 5px; color: var(--accent); font-size: 9pt; font-weight: 650; }
+  .role-summary { margin: 0 0 5px; color: var(--muted); font-size: 8.9pt; }
+  ul.bullets { margin: 0; padding: 0; list-style: none; }
+  ul.bullets li { position: relative; margin: 2px 0; padding-left: 12px; }
+  ul.bullets li::before { content: ""; position: absolute; left: 0; top: 0.58em; width: 5px; height: 5px; border-radius: 50%; background: #9b78dc; }
+  .footer-grid { display: grid; grid-template-columns: 1.35fr 0.65fr; gap: 24px; padding-top: 10px; border-top: 1px solid var(--rule); }
+  .skill-row { margin: 0 0 4px; color: var(--muted); font-size: 8.85pt; }
+  .skill-row strong { color: var(--ink); }
+  .education p { margin: 0 0 3px; }
+  .education .muted { color: var(--muted); font-size: 8.7pt; }
 </style>
 </head>
 <body>
-
-  <header class="resume-header">
+  <header>
     <div>
       <h1>Robin O'Brien</h1>
-      <div class="title">IT Specialist &amp; Independent Software Developer</div>
+      <div class="headline">Independent Software Developer &amp; IT Specialist</div>
     </div>
-    <div class="contact-block">
-      Listowel, ON &middot; 519.635.2628<br>
-      robin.c.obrien@icloud.com<br>
-      robinobrien.me &middot; github.com/imposterSyndromium
-    </div>
+    <div class="contact">Listowel, Ontario · 519.635.2628 · robin.c.obrien@icloud.com · robinobrien.me · github.com/imposterSyndromium</div>
   </header>
 
   <section>
-    <h2>Professional Summary</h2>
-    <p class="summary">IT Specialist with 13+ years supporting manufacturing IT environments, now working full-time as an independent, self-taught software developer. At Toyota Boshoku (2012&ndash;2026), I administered enterprise systems &mdash; Windows, Active Directory, virtualization, AS/400 integration, cybersecurity incident response &mdash; and independently built the VB.NET applications, automated reporting, and KPI systems that ran the floor, without a formal development background. I taught myself Swift and SwiftUI and shipped <strong>Inner Whisper</strong>, a live iOS app on the App Store, under my own label, <strong>Moving Truth</strong> (apps.movingtruth.com). AI tools are core to how I build daily, and I'm currently designing a framework to orchestrate multiple AI agents from different providers on shared tasks.</p>
+    <h2>Profile</h2>
+    <p class="profile">Practical software developer with a 14-year foundation in manufacturing IT. Builds dependable applications, reporting systems, and automation that connect technical infrastructure to real operational needs. Now designing and shipping independent native apps under Moving Truth, including <strong>Inner Whisper</strong>, available on the App Store.</p>
   </section>
 
   <section>
-    <h2>Technical Skills</h2>
-    <div class="skill-cat">
-      <h3>Programming &amp; Development:</h3>
-      <p>VB.NET &middot; Swift &amp; SwiftUI &middot; SQL Server &amp; Database Management &middot; PLC Integration</p>
-    </div>
-    <div class="skill-cat">
-      <h3>AI &amp; Automation:</h3>
-      <p>AI-assisted development workflow (daily use) &middot; building a personal multi-agent orchestration framework across AI providers &middot; agentic/prompt-driven automation</p>
-    </div>
-    <div class="skill-cat">
-      <h3>Systems &amp; Platforms:</h3>
-      <p>Windows Administration &amp; Support &middot; macOS &amp; Linux Administration &middot; SSRS (Extensive) &middot; Active Directory &amp; Group Policy &middot; Virtual Environment Management &middot; Remote Administration &middot; IBM AS/400 with DB2 &middot; Industrial Control Systems Integration &middot; Cybersecurity &amp; Threat Detection</p>
-    </div>
-    <div class="skill-cat">
-      <h3>Specializations:</h3>
-      <p>Custom application development &middot; automated reporting &amp; data distribution &middot; KPI dashboards &middot; Health &amp; Safety compliance systems &middot; real-time PLC data capture</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Professional Experience</h2>
-
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Independent Software Developer<span class="badge-live">Inner Whisper &mdash; Live on the App Store</span></span>
-        <span class="entry-meta">May 2026 &ndash; Present</span>
-      </div>
-      <div class="entry-org">Moving Truth (self-employed) &middot; apps.movingtruth.com</div>
-      <p class="entry-sub">Designing, building, and shipping software independently, full-time, after 13+ years in enterprise IT &mdash; self-taught, outside any formal development training.</p>
-      <ul class="bullets">
-        <li><strong>Inner Whisper (iOS):</strong> Self-taught Swift &amp; SwiftUI and independently designed, built, and shipped a native iOS app &mdash; curated quotes, favorites, custom theming, configurable notifications, on-device encryption &mdash; published solo under my own label, Moving Truth</li>
-        <li><strong>Multi-Agent AI Orchestration Framework:</strong> Designing and building a personal system to coordinate multiple AI agents from different providers (e.g. Claude, GPT-based agents) working together on shared tasks</li>
-        <li><strong>AI-Assisted Development:</strong> AI coding tools are core to my daily workflow &mdash; used to design, build, and ship faster across every project</li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">IT Specialist</span>
-        <span class="entry-meta">February 2012 &ndash; May 2026 (14 years)</span>
-      </div>
-      <div class="entry-org">Toyota Boshoku &middot; Elmira, Ontario</div>
-      <p class="entry-sub">Comprehensive IT support for office and production environments; also sole developer for custom business applications.</p>
-      <ul class="bullets">
-        <li><strong>Application Development:</strong> Independently designed and developed multiple business-critical VB.NET applications &mdash; KPI tracking &amp; dashboards, Health &amp; Safety incident reporting, production sequencing &amp; workflow management, HR kiosk interfaces, inventory tracking</li>
-        <li><strong>Industrial Integration:</strong> Built interfaces between custom applications and PLCs for real-time production data capture and reporting</li>
-        <li><strong>Advanced Reporting &amp; Analytics:</strong> Developed automated SSRS reporting for production metrics, Health &amp; Safety summaries, and operational dashboards</li>
-        <li><strong>Enterprise System Management:</strong> Remote administration across multiple locations &mdash; security, updates, performance across virtual and physical environments</li>
-        <li><strong>Cybersecurity &amp; Incident Response:</strong> Identified security breaches and malicious email; led key parts of disaster recovery from a major cybersecurity event, including enhanced protocols and system restoration</li>
-        <li><strong>Legacy System Integration:</strong> Maintained and integrated IBM AS/400 DB2 databases with modern applications</li>
-        <li><strong>Data Processing &amp; Distribution:</strong> Automated data collection, processing, and report distribution, cutting manual effort and improving accuracy</li>
-      </ul>
-    </div>
-  </section>
-
-  <section>
-    <h2>Education</h2>
-    <div class="entry">
-      <div class="entry-title">Network Engineering &amp; System Administration</div>
-      <div class="entry-org">Conestoga College, Kitchener, ON</div>
-      <div class="entry-meta">2010 &ndash; 2011</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Professional Development</h2>
-    <ul class="bullets">
-      <li>Deepening Swift &amp; SwiftUI expertise through continued shipping</li>
-      <li>Pursuing Ignition Platform Certification (Industrial Automation)</li>
+    <h2>Core Strengths</h2>
+    <ul class="strengths">
+      <li><strong>Software:</strong> VB.NET, Swift, SwiftUI, C#, SQL, Python</li>
+      <li><strong>Data:</strong> SQL Server, SSRS, KPI dashboards, automation</li>
+      <li><strong>Systems:</strong> Windows, macOS, Linux, AD, virtualization</li>
+      <li><strong>Industrial IT:</strong> PLC integration, AS/400, 24/7 operations</li>
     </ul>
   </section>
 
   <section>
-    <h2>Core Competencies</h2>
-    <div class="competency">
-      <h3>Independent Problem Solving &amp; Self-Directed Learning:</h3>
-      <p>Delivers complex technical solutions with minimal supervision; VB.NET, SSRS, PLC integration, cybersecurity, and Swift/SwiftUI were all learned independently.</p>
-    </div>
-    <div class="competency">
-      <h3>Rapid Technology Adoption &amp; Process Automation:</h3>
-      <p>Quickly learns and implements new technologies, including AI-assisted tooling; expert at identifying inefficiencies and building the automated systems that fix them.</p>
-    </div>
-    <div class="competency">
-      <h3>Cross-Functional Collaboration &amp; Project Management:</h3>
-      <p>Effective liaison between IT, HR, production, and management teams; manages multiple concurrent projects from conception to deployment, at work and independently.</p>
-    </div>
+    <h2>Experience</h2>
+    <article class="role">
+      <div class="role-head">
+        <h3>Independent Software Developer</h3>
+        <div class="date">May 2026 - Present</div>
+      </div>
+      <div class="org">Moving Truth · Self-employed</div>
+      <p class="role-summary">Owns product direction, design, development, testing, accessibility, privacy, and release for an independent family of apps.</p>
+      <ul class="bullets">
+        <li>Designed, built, and independently published <strong>Inner Whisper</strong>, a native SwiftUI app with favourites, custom themes, configurable reminders, offline operation, and on-device protection for personal entries.</li>
+        <li>Established reusable product principles across five app concepts: privacy by design, accessibility from the beginning, calm interaction, and no attention-pressure mechanics.</li>
+        <li>Developing a human-governed framework for coordinating multiple AI systems with explicit authority boundaries, durable memory, evidence, and independent review.</li>
+      </ul>
+    </article>
+
+    <article class="role">
+      <div class="role-head">
+        <h3>IT Specialist</h3>
+        <div class="date">February 2012 - May 2026</div>
+      </div>
+      <div class="org">Toyota Boshoku · Elmira, Ontario</div>
+      <p class="role-summary">Supported office and production technology while serving as the principal developer of custom internal applications.</p>
+      <ul class="bullets">
+        <li>Designed and maintained business-critical VB.NET applications for KPI tracking, health and safety reporting, production sequencing, HR kiosks, inventory, and workflow management.</li>
+        <li>Connected custom applications to PLCs and SQL Server for reliable, real-time production data capture and reporting.</li>
+        <li>Replaced labour-intensive reporting with scheduled SSRS workflows and automated distribution, reducing manual effort while improving consistency and visibility.</li>
+        <li>Administered Windows, Active Directory, Group Policy, virtual and physical environments, remote systems, and IBM AS/400 DB2 integrations across multiple locations.</li>
+        <li>Identified security threats and supported recovery from a major cybersecurity incident, including restoration work and stronger operating protocols.</li>
+        <li>Worked directly with production, HR, health and safety, and management teams to turn operational problems into maintainable technical solutions.</li>
+      </ul>
+    </article>
   </section>
 
+  <section class="footer-grid">
+    <div>
+      <h2>Additional Capabilities</h2>
+      <p class="skill-row"><strong>Development:</strong> application architecture · API and system integration · Git · AI-assisted development</p>
+      <p class="skill-row"><strong>Operations:</strong> incident response · remote administration · threat detection · process improvement</p>
+      <p class="skill-row"><strong>Working style:</strong> self-directed learning · cross-functional communication · end-to-end ownership</p>
+    </div>
+    <div class="education">
+      <h2>Education</h2>
+      <p><strong>Network Engineering &amp;<br>System Administration</strong></p>
+      <p class="muted">Conestoga College<br>Kitchener, Ontario · 2010-2011</p>
+    </div>
+  </section>
 </body>
 </html>
