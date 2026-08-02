@@ -130,7 +130,6 @@ function insertFooter(footerHtml, basePath) {
         'featured-projects': `${basePath}pages/highlights/featured-projects.html`,
         'awards': `${basePath}pages/highlights/awards.html`,
         'resume': `${basePath}pages/resume.html`,
-        'writing': `${basePath}pages/blog.html`,
         'contact': `${basePath}index.html#contact`
     };
     

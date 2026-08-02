@@ -22,7 +22,6 @@
 - [x] Highlights section showcasing featured content
 - [x] Products section with detailed information
 - [x] Downloads section for resources
-- [x] Updates section for news and blog
 - [x] Support section with documentation
 
 ### Performance Features
@@ -82,4 +81,4 @@
 5. User preferences storage
 6. Advanced analytics
 7. A/B testing capabilities
-8. Progressive Web App features 
+8. Progressive Web App features
