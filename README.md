@@ -196,9 +196,6 @@ Additional documentation is available in the `project-docs/` directory:
 
 ## 🛠️ Development Guidelines
 
-<<<<<<< HEAD
-- Email: contact@impostersyndromium.com
-=======
 ### Code Standards
 
 - **Option Strict**: Use strict mode in JavaScript
@@ -235,5 +232,4 @@ This project is open source and available under the MIT License.
 
 ---
 
-**Last Updated**: January 2024
->>>>>>> de184a4 (Revise README.md to reflect the transition from ImposterSyndromium to Robin O'Brien's personal portfolio website. Update project overview, key features, and structure. Enhance sections for blog functionality, customization options, and development guidelines. Improve accessibility and performance details.)
+**Last Updated**: August 2026
