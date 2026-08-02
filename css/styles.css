@@ -400,6 +400,32 @@ body {
   color: var(--light-text);
 }
 
+/* Status Badges (Apps section) */
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  position: relative;
+  z-index: 2;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.badge--live {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+.badge--soon {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--light-text);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
 /* Footer */
 footer {
   background: linear-gradient(to bottom, var(--footer-bg), #0f0f0f);

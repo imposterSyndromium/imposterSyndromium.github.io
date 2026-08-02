@@ -153,9 +153,9 @@ function insertFooter(footerHtml, basePath) {
      * Resolve image paths for platform logos
      */
     const imageMap = {
-        'tux': `${basePath}images/tux.png?v=1.1.3`,
-        'android': `${basePath}images/android.png?v=1.1.3`,
-        'logo': `${basePath}images/logo.png?v=1.1.3`
+        'tux': `${basePath}images/tux.png?v=1.1.4`,
+        'android': `${basePath}images/android.png?v=1.1.4`,
+        'logo': `${basePath}images/logo.png?v=1.1.4`
     };
     
     // Update all footer images
