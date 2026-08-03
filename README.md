@@ -10,10 +10,7 @@ Built with semantic HTML, CSS, and vanilla JavaScript.
 - **Apps** - Moving Truth and the Inner app family
 - **Experience** - Enterprise IT, manufacturing systems, and software projects
 - **Résumé** - An accessible professional overview and downloadable one-page PDF
-- **Contact** - Email and GitHub
-
-The signature line **“Make Change. Be Swift. Think Different.”** appears between
-the homepage introduction and Robin's story.
+- **Contact** - Email
 
 ## Structure
 

@@ -1136,11 +1136,6 @@ button:focus-visible {
 .proof-strip dd { margin-top: 0.2rem; color: var(--light-text); font-size: 0.86rem; }
 .proof-strip--page { max-width: none; margin-top: 0; text-align: center; }
 
-.motto-band { border-top: 1px solid var(--rule-color); border-bottom: 1px solid var(--rule-color); background: #070707; }
-.motto-band__inner { display: grid; grid-template-columns: repeat(3, 1fr); padding-top: 1.4rem; padding-bottom: 1.4rem; }
-.motto-band span { color: #e7e1f2; font-size: clamp(1rem, 2vw, 1.35rem); font-weight: 650; letter-spacing: -0.02em; text-align: center; }
-.motto-band span + span { border-left: 1px solid var(--rule-color); }
-
 .section--soft { background: var(--surface-soft); }
 .section--tight { padding-top: 2rem; padding-bottom: 4rem; }
 
@@ -1332,9 +1327,6 @@ button:focus-visible {
   .proof-strip { grid-template-columns: 1fr; text-align: left; }
   .proof-strip div { padding: 1rem 0; }
   .proof-strip div + div { border-left: 0; border-top: 1px solid var(--rule-color); }
-  .motto-band__inner { grid-template-columns: 1fr; }
-  .motto-band span { padding: 0.7rem 0; }
-  .motto-band span + span { border-top: 1px solid var(--rule-color); border-left: 0; }
   .lead-copy,
   .app-grid,
   .feature-list,
