@@ -87,7 +87,6 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <div class="footer-section">
                                     <h3>Connect</h3>
                                     <div class="social-links">
-                                        <a href="https://github.com/imposterSyndromium/" target="_blank" rel="noopener noreferrer">GitHub</a>
                                         <a href="mailto:robin@robinobrien.me">Email</a>
                                     </div>
                                 </div>

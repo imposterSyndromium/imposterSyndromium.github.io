@@ -62,4 +62,3 @@ at [robinobrien.me](https://robinobrien.me).
 - Robin O'Brien
 - Listowel, Ontario
 - robin.c.obrien@icloud.com
-- [github.com/imposterSyndromium](https://github.com/imposterSyndromium)
