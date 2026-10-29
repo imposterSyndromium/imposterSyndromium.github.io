@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     let footerPath = '/components/footer.html';
     // Cache-busting with version number
-    footerPath += '?v=1.2.0';
+    footerPath += '?v=1.3.1';
     
     /**
      * Calculate the base path for relative links and images

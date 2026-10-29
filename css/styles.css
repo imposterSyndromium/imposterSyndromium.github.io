@@ -1372,7 +1372,7 @@ main { min-width: 0; }
 section[id] { scroll-margin-top: calc(var(--header-height) + var(--banner-height) + 24px); }
 .main-nav { top: var(--banner-height); height: var(--header-height); background: #0b1215ed; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border-bottom: 1px solid var(--rule-color); box-shadow: none; }
 .main-nav .container { padding: 0; }
-.logo-img { height: 44px; width: 44px; object-fit: cover; border-radius: 50%; margin-right: 12px; }
+.logo-img { height: 44px; width: 44px; object-fit: contain; border-radius: 0; margin-right: 12px; }
 .logo-text { font-size: 1.15rem; letter-spacing: -.035em; }
 .nav-links { gap: 1.8rem; align-items: center; }
 .nav-item a { display: inline-flex; align-items: center; min-height: 44px; color: #bac6c8; font-size: .84rem; }
@@ -1493,3 +1493,5 @@ footer { background: var(--background); border-top: 1px solid var(--rule-color);
 .portfolio-hero .eyebrow { margin: 0 0 1.4rem; color: var(--secondary-color); font-size: .7rem; line-height: 1.8; letter-spacing: .16em; }
 .portfolio-hero .blueprint-caption { margin: 1.8rem 0 0; color: var(--light-text); font-size: .75rem; line-height: 1.6; opacity: 1; transform: none; animation: none; }
 .portfolio-hero .hero-lede { opacity: 1; transform: none; animation: none; }
+
+.footer-bottom .footer-motto { margin-bottom: 1.5rem; color: var(--text-color); font-size: clamp(1.15rem, 3vw, 1.7rem); font-weight: 500; letter-spacing: -.025em; opacity: 1; }
