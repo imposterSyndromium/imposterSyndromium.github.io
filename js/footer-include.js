@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     let footerPath = '/components/footer.html';
     // Cache-busting with version number
-    footerPath += '?v=1.3.1';
+    footerPath += '?v=1.3.2';
     
     /**
      * Calculate the base path for relative links and images
@@ -146,8 +146,8 @@ function insertFooter(footerHtml, basePath) {
      */
     const imageMap = {
         'tux': `${basePath}images/tux.png?v=1.1.4`,
-        'android': `${basePath}images/android.png?v=1.1.4`,
-        'logo': `${basePath}images/logo.png?v=1.1.4`
+        'android': `${basePath}images/android.svg?v=1.3.2`,
+        'logo': `${basePath}images/robin.png?v=1.3.2`
     };
     
     // Update all footer images

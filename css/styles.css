@@ -1495,3 +1495,17 @@ footer { background: var(--background); border-top: 1px solid var(--rule-color);
 .portfolio-hero .hero-lede { opacity: 1; transform: none; animation: none; }
 
 .footer-bottom .footer-motto { margin-bottom: 1.5rem; color: var(--text-color); font-size: clamp(1.15rem, 3vw, 1.7rem); font-weight: 500; letter-spacing: -.025em; opacity: 1; }
+
+/* Current app artwork and readable technology marks. */
+.app-icon { display: block; width: 88px; height: 88px; object-fit: contain; border-radius: 20%; flex-shrink: 0; }
+.app-card > .app-icon { margin-top: 2rem; }
+.app-card > .app-icon + h3 { margin-top: 1.25rem; }
+.app-icon--home { width: 112px; height: 112px; margin-top: 2.5rem; }
+.work-card--feature .app-icon--home + h3 { margin-top: 1.5rem; padding-top: 0; }
+.app-icon--featured { width: min(78%, 240px); height: auto; aspect-ratio: 1; box-shadow: 0 16px 40px #0003; }
+.icon-note { color: var(--light-text); margin: -.5rem 0 1rem; }
+.footer-bottom .platform-logos { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; opacity: 1; transform: none; margin-top: 2rem; }
+.footer-bottom .platform-logo, .footer-bottom .platform-logo[title="Android"] { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: .65rem; width: 60px; height: auto; color: var(--text-color); opacity: 1; transform: none; }
+.footer-bottom .platform-logo svg, .footer-bottom .platform-logo img { display: block; width: 36px; height: 36px; object-fit: contain; flex-shrink: 0; }
+.platform-caption { color: var(--light-text); font-size: .7rem; line-height: 1.4; }
+@media (max-width: 900px) { .featured-app__number { padding: 2rem; } .app-icon--featured { width: 140px; } }
