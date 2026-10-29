@@ -5,20 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Robin O'Brien is an independent software developer and longtime IT specialist building dependable systems, useful apps, and practical automation.">
   <title>Robin O'Brien — Software Developer &amp; IT Specialist</title>
-  <link rel="stylesheet" href="css/styles.css?v=1.2.0">
+  <link rel="stylesheet" href="css/styles.css?v=1.3.0">
 </head>
 <body>
   <!-- Shared navigation is loaded by header-include.js -->
 
-  <main>
+  <main id="main-content">
     <section class="hero portfolio-hero" aria-labelledby="hero-title">
       <div class="container portfolio-hero__inner">
+        <div class="hero-copy">
         <p class="eyebrow">Independent software developer · IT specialist</p>
-        <h1 id="hero-title">I build the systems behind the work—and the apps beyond it.</h1>
+        <h1 id="hero-title">I build the systems behind the work—and <span>the apps beyond it.</span></h1>
         <p class="hero-lede">For fourteen years, I kept technology moving inside a manufacturing environment and built the software the floor depended on. Today, I bring that same practical discipline to independent apps under Moving Truth.</p>
         <div class="button-row button-row--center">
-          <a href="#work" class="button button--primary">Explore my work</a>
+          <a href="#work" class="button button--primary">Explore my work <span aria-hidden="true">↗</span></a>
+          <a href="pages/resume.html" class="button button--secondary">View résumé</a>
         </div>
+        </div>
+        <aside class="hero-blueprint" aria-label="My approach to building software">
+          <div class="blueprint-label"><span>From complexity to clarity</span><span>01 — 03</span></div>
+          <div class="blueprint-node"><small>01 / UNDERSTAND</small><strong>Real people. Real problems.</strong></div>
+          <div class="blueprint-connector" aria-hidden="true"></div>
+          <div class="blueprint-node"><small>02 / BUILD</small><strong>Thoughtful, useful software.</strong></div>
+          <div class="blueprint-connector" aria-hidden="true"></div>
+          <div class="blueprint-node"><small>03 / DELIVER</small><strong>Systems people can rely on.</strong></div>
+          <p class="blueprint-caption">A practical mindset, from the factory floor to the App Store.</p>
+        </aside>
         <dl class="proof-strip" aria-label="Career highlights">
           <div><dt>14 years</dt><dd>Enterprise IT</dd></div>
           <div><dt>2 shipped</dt><dd>App Store releases</dd></div>
@@ -116,8 +128,8 @@
   </main>
 
   <!-- Shared footer is loaded by footer-include.js -->
-  <script src="js/header-include.js?v=1.2.0" defer></script>
+  <script src="js/header-include.js?v=1.3.0" defer></script>
   <script src="js/footer-include.js?v=1.2.0" defer></script>
-  <script src="js/script.js?v=1.2.0" defer></script>
+  <script src="js/script.js?v=1.3.0" defer></script>
 </body>
 </html>

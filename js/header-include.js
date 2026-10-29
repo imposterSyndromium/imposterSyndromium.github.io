@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     // Cache-busting with version number (better for browser caching)
     // Increment this version number when header.html changes
-    headerPath += '?v=1.2.0';
+    headerPath += '?v=1.3.0';
     
     /**
      * Include header component
@@ -179,10 +179,16 @@ function displaySiteMessage(text) {
 
     if (text) {
         messageContainer.textContent = text;
-        messageContainer.style.display = 'block';
+        messageContainer.style.display = 'flex';
         messageContainer.setAttribute('aria-live', 'polite');
     } else {
         messageContainer.style.display = 'none';
+    }
+    const updateBannerHeight = () => document.documentElement.style.setProperty('--banner-height', `${messageContainer.getBoundingClientRect().height}px`);
+    updateBannerHeight();
+    if (!messageContainer.bannerObserver && 'ResizeObserver' in window) {
+        messageContainer.bannerObserver = new ResizeObserver(updateBannerHeight);
+        messageContainer.bannerObserver.observe(messageContainer);
     }
 }
 
@@ -196,58 +202,30 @@ function displaySiteMessage(text) {
  * - Accessibility attributes
  */
 function initializeMobileMenu() {
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-    const dropdownItems = document.querySelectorAll('.nav-item.dropdown');
-
-    if (!mobileMenuBtn || !navLinks) return;
-
-    // Toggle mobile menu
-    mobileMenuBtn.addEventListener('click', function() {
-        const isExpanded = navLinks.classList.toggle('active');
-        mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
-        mobileMenuBtn.setAttribute('aria-label', isExpanded ? 'Close menu' : 'Open menu');
+    const button = document.querySelector('.mobile-menu-btn');
+    const links = document.querySelector('.nav-links');
+    if (!button || !links || button.dataset.initialized) return;
+    button.dataset.initialized = 'true';
+    const close = () => {
+        links.classList.remove('active');
+        button.setAttribute('aria-expanded', 'false');
+        button.setAttribute('aria-label', 'Open menu');
+    };
+    button.addEventListener('click', () => {
+        const expanded = links.classList.toggle('active');
+        button.setAttribute('aria-expanded', String(expanded));
+        button.setAttribute('aria-label', expanded ? 'Close menu' : 'Open menu');
     });
-
-    // Handle dropdowns on mobile
-    dropdownItems.forEach(item => {
-        const link = item.querySelector('a');
-        if (link) {
-            link.addEventListener('click', function(e) {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    const isExpanded = item.classList.toggle('active');
-                    link.setAttribute('aria-expanded', isExpanded);
-                }
-            });
-        }
+    links.addEventListener('click', event => { if (event.target.closest('a')) close(); });
+    document.addEventListener('click', event => {
+        if (!links.contains(event.target) && !button.contains(event.target)) close();
     });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-            navLinks.classList.remove('active');
-            mobileMenuBtn.setAttribute('aria-expanded', 'false');
-            mobileMenuBtn.setAttribute('aria-label', 'Open menu');
-            dropdownItems.forEach(item => {
-                item.classList.remove('active');
-                const link = item.querySelector('a');
-                if (link) link.setAttribute('aria-expanded', 'false');
-            });
-        }
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && links.classList.contains('active')) { close(); button.focus(); }
     });
-
-    // Close menu on escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            navLinks.classList.remove('active');
-            mobileMenuBtn.setAttribute('aria-expanded', 'false');
-            mobileMenuBtn.setAttribute('aria-label', 'Open menu');
-            dropdownItems.forEach(item => {
-                item.classList.remove('active');
-                const link = item.querySelector('a');
-                if (link) link.setAttribute('aria-expanded', 'false');
-            });
-        }
+    matchMedia('(min-width: 769px)').addEventListener('change', close);
+    links.querySelectorAll('a').forEach(link => {
+        const url = new URL(link.href);
+        if (url.pathname === location.pathname && !url.hash) link.setAttribute('aria-current', 'page');
     });
 }
