@@ -104,6 +104,21 @@
               </div>
             </details>
           </article>
+          <article class="work-card work-card--analysis">
+            <div class="work-card__meta"><span class="status-pill">Private engineering project · In development</span><span>Node.js · Static sites · Hugo</span></div>
+            <h3>Release Fabric</h3>
+            <p>A release-integrity system for families of multilingual websites. It checks that translations stay aligned with their source, links and metadata point to the right pages and languages, and builds reproduce consistently—turning release checks into a repeatable engineering process.</p>
+            <div class="tag-list" aria-label="Release Fabric capabilities"><span>Translation freshness</span><span>Cross-site validation</span><span>Reproducible builds</span><span>Deterministic evidence</span></div>
+            <details class="analysis-details">
+              <summary>Inside Release Fabric <span aria-hidden="true">↗</span></summary>
+              <div class="analysis-details__grid">
+                <div><h4>One release contract</h4><p>A shared manifest describes the sites, languages, build settings, and explicit exceptions that belong to a release.</p></div>
+                <div><h4>Catch drift early</h4><p>Checks identify stale translations, missing content, changed placeholders, and links or metadata that point to the wrong locale.</p></div>
+                <div><h4>Stage and verify</h4><p>Changes are planned and built in a separate staged result. Source repositories remain untouched, with fingerprints checked throughout the run.</p></div>
+                <div><h4>Evidence before publication</h4><p>The system records a deterministic integrity decision. A passing check supports a release decision; publication remains a separate human-controlled step.</p></div>
+              </div>
+            </details>
+          </article>
         </div>
       </div>
     </section>
