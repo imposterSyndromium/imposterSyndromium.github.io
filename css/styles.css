@@ -1543,3 +1543,9 @@ footer { background: var(--background); border-top: 1px solid var(--rule-color);
 .manufacturing-feature__body > p { color: var(--light-text); line-height: 1.8; margin-bottom: 1.2rem; }
 .manufacturing-feature .button-row { gap: 1.2rem; }
 @media (max-width: 768px) { .manufacturing-feature { grid-template-columns: 1fr; } }
+
+/* Four upcoming apps share two balanced rows below the released pair. */
+.app-showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.app-showcase-grid .app-card, .app-showcase-grid .app-card--released { grid-column: auto; }
+#inner-course { scroll-margin-top: calc(var(--header-height) + var(--banner-height) + 130px); }
+@media (max-width: 600px) { .app-showcase-grid { grid-template-columns: 1fr; } }
