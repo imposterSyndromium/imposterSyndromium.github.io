@@ -1509,3 +1509,15 @@ footer { background: var(--background); border-top: 1px solid var(--rule-color);
 .footer-bottom .platform-logo svg, .footer-bottom .platform-logo img { display: block; width: 36px; height: 36px; object-fit: contain; flex-shrink: 0; }
 .platform-caption { color: var(--light-text); font-size: .7rem; line-height: 1.4; }
 @media (max-width: 900px) { .featured-app__number { padding: 2rem; } .app-icon--featured { width: 140px; } }
+
+/* Released apps lead the showcase; upcoming apps remain clearly identified. */
+.app-showcase-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1.25rem; }
+.app-showcase-grid .app-card { grid-column: span 2; min-width: 0; }
+.app-showcase-grid .app-card--released { grid-column: span 3; background: linear-gradient(145deg, #21443870, var(--surface-raised) 75%); }
+.app-showcase-grid .app-card h3 { margin-top: 2rem; font-size: clamp(1.6rem, 3vw, 2.6rem); }
+.project-preview-note { color: var(--light-text); font-size: .8rem; margin-top: auto; }
+#inner-sign, #inner-play, #inner-check { scroll-margin-top: calc(var(--header-height) + var(--banner-height) + 130px); }
+@media (max-width: 900px) { .app-showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .app-showcase-grid .app-card, .app-showcase-grid .app-card--released { grid-column: auto; } }
+@media (max-width: 600px) { .app-showcase-grid { grid-template-columns: 1fr; } .app-showcase-grid .app-card__top { flex-wrap: wrap; } }
+
+#apps-showcase-title { scroll-margin-top: calc(var(--header-height) + var(--banner-height) + 32px); }
