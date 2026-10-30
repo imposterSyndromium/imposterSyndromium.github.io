@@ -1521,3 +1521,15 @@ footer { background: var(--background); border-top: 1px solid var(--rule-color);
 @media (max-width: 600px) { .app-showcase-grid { grid-template-columns: 1fr; } .app-showcase-grid .app-card__top { flex-wrap: wrap; } }
 
 #apps-showcase-title { scroll-margin-top: calc(var(--header-height) + var(--banner-height) + 32px); }
+
+.work-card--analysis { grid-column: 1 / -1; background: linear-gradient(120deg, #18383b60, var(--surface-raised) 75%); }
+.work-card.work-card--analysis h3 { margin-top: 1.6rem; font-size: clamp(2rem, 4vw, 3.5rem); }
+.work-card--analysis > p { max-width: 850px; }
+.analysis-details { margin-top: 2rem; border-top: 1px solid var(--rule-color); }
+.analysis-details summary { display: list-item; padding: 1.2rem .2rem; cursor: pointer; color: var(--secondary-color); font-size: .9rem; font-weight: 600; }
+.analysis-details summary:focus-visible { outline: 3px solid var(--secondary-color); outline-offset: 4px; }
+.analysis-details summary span { float: right; }
+.analysis-details__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 3rem; padding-top: 1rem; }
+.analysis-details h4 { font-size: 1rem; font-weight: 600; margin-bottom: .6rem; }
+.analysis-details__grid p { margin: 0; font-size: .95rem; }
+@media (max-width: 600px) { .analysis-details__grid { grid-template-columns: 1fr; } }
