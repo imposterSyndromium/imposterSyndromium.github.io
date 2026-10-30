@@ -1533,3 +1533,13 @@ footer { background: var(--background); border-top: 1px solid var(--rule-color);
 .analysis-details h4 { font-size: 1rem; font-weight: 600; margin-bottom: .6rem; }
 .analysis-details__grid p { margin: 0; font-size: .95rem; }
 @media (max-width: 600px) { .analysis-details__grid { grid-template-columns: 1fr; } }
+
+.portfolio-group-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.portfolio-group-heading .eyebrow { margin: 0; }
+.portfolio-group-heading--engineering { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--rule-color); }
+.work-grid--engineering { grid-template-columns: 1fr; }
+.manufacturing-feature { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(2rem, 6vw, 6rem); }
+.manufacturing-feature h2 { margin: 0; text-align: left; font-size: clamp(2rem, 4vw, 3.4rem); font-weight: 500; line-height: 1.12; text-wrap: balance; }
+.manufacturing-feature__body > p { color: var(--light-text); line-height: 1.8; margin-bottom: 1.2rem; }
+.manufacturing-feature .button-row { gap: 1.2rem; }
+@media (max-width: 768px) { .manufacturing-feature { grid-template-columns: 1fr; } }
