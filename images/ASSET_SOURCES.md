@@ -10,3 +10,5 @@
 ## App-project correction — 2026-10-30
 
 Whisper, Thought, Sign, Play and Check now use the default icon selected by each native app’s AppIcon.appiconset/Contents.json, rather than the landing-page assets. Whisper comes from InnerWhisper-iOS; Play uses AppIcon-1024.png, replacing the provisional landing-page illustration.
+
+Inner Vault (2026-10-30): default InnerVaultAppIcon-1024.png selected by the native InnerVault AppIcon.appiconset/Contents.json.

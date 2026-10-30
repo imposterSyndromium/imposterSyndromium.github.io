@@ -1549,3 +1549,6 @@ footer { background: var(--background); border-top: 1px solid var(--rule-color);
 .app-showcase-grid .app-card, .app-showcase-grid .app-card--released { grid-column: auto; }
 #inner-course { scroll-margin-top: calc(var(--header-height) + var(--banner-height) + 130px); }
 @media (max-width: 600px) { .app-showcase-grid { grid-template-columns: 1fr; } }
+
+#inner-vault { scroll-margin-top: calc(var(--header-height) + var(--banner-height) + 130px); }
+@media (min-width: 601px) { .app-showcase-grid > .app-card:last-child:nth-child(odd) { grid-column: 1 / -1; } }
