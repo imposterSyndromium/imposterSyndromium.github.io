@@ -28,6 +28,7 @@ Built with semantic HTML, CSS, and vanilla JavaScript.
 │   └── products/
 ├── resume/
 │   ├── RobinOBrien_Resume_20260802.pdf
+│   ├── RobinOBrien_Resume_20261102.pdf
 │   └── src/resume.html
 └── project-docs/
 ```
@@ -57,5 +58,5 @@ at [robinobrien.me](https://robinobrien.me).
 ## Contact
 
 - Robin O'Brien
-- Listowel, Ontario
+- Palmerston, Ontario
 - robin.c.obrien@icloud.com
