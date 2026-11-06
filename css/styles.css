@@ -1561,6 +1561,7 @@ footer { background: var(--background); border-top: 1px solid var(--rule-color);
 .card-link-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto; flex-wrap: wrap; }
 .card-link-row .text-link { margin-top: 0; }
 .case-study h2 { font-size: clamp(2.2rem, 4.5vw, 4rem); line-height: 1.08; font-weight: 520; letter-spacing: -.045em; text-wrap: balance; }
+.case-study [id] { scroll-margin-top: calc(var(--header-height) + var(--banner-height) + 2rem); }
 .case-hero { margin-top: calc(var(--header-height) + var(--banner-height)); padding: clamp(4rem, 8vw, 7rem) 0 0; overflow: hidden; background: radial-gradient(ellipse at 75% 20%, #4d317946, transparent 55%), radial-gradient(ellipse at 20% 80%, #214b4338, transparent 50%), var(--background); }
 .case-hero__grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(360px, .9fr); gap: clamp(2.5rem, 7vw, 7rem); align-items: center; }
 .case-back-link { display: inline-block; margin-bottom: 3rem; color: var(--light-text); text-decoration: none; font-size: .82rem; }
@@ -1582,6 +1583,7 @@ footer { background: var(--background); border-top: 1px solid var(--rule-color);
 .case-facts dd { margin-top: .55rem; color: var(--text-color); font-size: .92rem; line-height: 1.45; }
 .case-two-column, .case-failure { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(3rem, 8vw, 8rem); align-items: start; }
 .case-prose { max-width: 760px; }
+.case-prose--wide { max-width: 980px; }
 .case-prose > p, .case-outcome__copy > p, .case-closing > p { color: var(--light-text); font-size: 1.05rem; line-height: 1.85; margin-bottom: 1.3rem; }
 .case-heading { align-items: end; }
 .case-origin { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(3rem, 8vw, 8rem); align-items: start; }
@@ -1606,6 +1608,7 @@ footer { background: var(--background); border-top: 1px solid var(--rule-color);
 .challenge-grid article { padding: clamp(1.6rem, 4vw, 2.8rem); border: 1px solid var(--rule-color); border-radius: 14px; background: var(--surface-raised); }
 .challenge-grid h3 { margin-bottom: 1rem; font-size: 1.45rem; font-weight: 540; }
 .challenge-grid p { color: var(--light-text); line-height: 1.75; }
+.case-audit-grid { margin-top: 2.5rem; }
 .case-failure blockquote { margin-top: 2rem; padding: 1.7rem 2rem; border-left: 3px solid var(--secondary-color); background: var(--surface-soft); color: #dfe9e7; font-size: 1.1rem; line-height: 1.8; }
 .case-outcome { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, .6fr); gap: clamp(3rem, 8vw, 8rem); align-items: center; }
 .case-outcome__visual { max-width: 350px; justify-self: center; }

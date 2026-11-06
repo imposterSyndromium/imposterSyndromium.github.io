@@ -146,6 +146,26 @@
       </div>
     </section>
 
+    <section class="section" aria-labelledby="audit-title">
+      <div class="container">
+        <div class="case-section-title">
+          <p class="eyebrow">Auditable by design</p>
+          <h2 id="audit-title">The path from decision to release can be reconstructed and reviewed.</h2>
+        </div>
+        <div class="case-prose case-prose--wide">
+          <p>I preserve the complete material decision path needed to understand how and why the product changed: requirements, architecture decisions, agent directions and reviews, code changes, unit and regression results, failed approaches, errors, unexpected incidents, physical-device findings, corrections, and release outcomes. Mistakes do not disappear from the story simply because they were later fixed.</p>
+          <p>I only develop with automated unit tests and regression protection. New behaviour requires focused unit coverage. When a defect is reproducible, its failure becomes a regression test before or alongside the correction so the same condition cannot quietly return. Manual, accessibility, integration, and physical-device testing add evidence; they do not replace the automated suites.</p>
+          <p>Before I accept a release, the relevant unit and regression suites must pass and the supporting evidence must remain linked to the change. “Auditable” here means technically traceable and reviewable—it is not a claim of third-party compliance certification.</p>
+        </div>
+        <div class="challenge-grid case-audit-grid">
+          <article><h3>Decisions</h3><p>Requirements, constraints, alternatives, trade-offs, approvals, and architecture changes remain connected to the work they produced.</p></article>
+          <article><h3>Tests</h3><p>Unit results, regression coverage, integration checks, accessibility review, and physical-device evidence show what was verified.</p></article>
+          <article><h3>Failures and incidents</h3><p>Errors, accidents, unsuccessful approaches, unexpected behaviour, and rejected AI proposals remain part of the record.</p></article>
+          <article><h3>Corrections and releases</h3><p>Fixes, follow-up tests, changed assumptions, release decisions, and post-release adjustments preserve the full correction trail.</p></article>
+        </div>
+      </div>
+    </section>
+
     <section class="section section--soft" aria-labelledby="engineering-title">
       <div class="container">
         <div class="case-section-title"><p class="eyebrow">Where the real engineering happened</p><h2 id="engineering-title">The difficult parts lived between features.</h2></div>
@@ -178,7 +198,7 @@
           <p class="eyebrow">Outcome and evidence</p>
           <h2 id="outcome-title">A released product, followed by continuing correction.</h2>
           <p>Inner Thought 1.0 reached App Store distribution in July 2026. Later releases added private sharing, hands-free capture, audio-route repairs, a real MapKit location preview, a new icon, and adaptive accessibility corrections.</p>
-          <p>The repository contains automated unit and UI suites, release records, privacy declarations, accessibility and localization matrices, App Store materials, and the history of corrections made after simulator and physical-device testing.</p>
+          <p>The repository contains automated unit, regression, and UI suites; decision and release records; privacy declarations; accessibility and localization matrices; App Store materials; and the traceable history of failures, errors, incidents, corrections, and changed assumptions discovered through simulator and physical-device testing.</p>
           <p>The work is not presented as finished forever. Device-specific capture paths, broader assistive-technology verification, and human language review continue as the product evolves.</p>
         </div>
         <figure class="case-outcome__visual case-device case-device--detail">
