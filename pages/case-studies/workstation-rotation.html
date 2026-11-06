@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Workstation Rotation: a manufacturing scheduling system and the project where Robin O'Brien began developing a disciplined AI-assisted software workflow.">
+  <title>Workstation Rotation Case Study — Robin O'Brien</title>
+  <link rel="stylesheet" href="../../css/styles.css?v=1.4.0">
+  <link rel="icon" type="image/png" href="/images/favicon.png?v=1.3.2">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png?v=1.3.2">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Robin O’Brien">
+  <meta property="og:title" content="Workstation Rotation — Factory software and an early AI-assisted workflow">
+  <meta property="og:description" content="A constraint-based manufacturing scheduler—and the project where AI first became a serious development collaborator in Robin O'Brien's work.">
+  <meta property="og:url" content="https://robinobrien.me/pages/case-studies/workstation-rotation.html">
+  <meta property="og:image" content="https://robinobrien.me/images/robin.png?v=robin-20261030">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <!-- Shared navigation is loaded by header-include.js -->
+
+  <main id="main-content" class="case-study">
+    <section class="case-hero case-hero--rotation" aria-labelledby="case-title">
+      <div class="container case-hero__grid">
+        <div class="case-hero__copy">
+          <a class="case-back-link" href="../../index.html#manufacturing">← Manufacturing systems</a>
+          <p class="eyebrow">Case study · Manufacturing · AI workflow origins</p>
+          <h1 id="case-title">Workstation Rotation: factory rules turned into dependable scheduling software.</h1>
+          <p class="case-hero__lede">This was my first substantial project using AI inside a real software-development process. The business problem and decision authority were mine; AI became a capable reviewer, analyst, documenter, and implementation partner.</p>
+          <div class="button-row">
+            <a class="button button--primary" href="#ai-role">How AI was used <span aria-hidden="true">↓</span></a>
+            <a class="button button--secondary" href="inner-thought.html">See how the method evolved</a>
+          </div>
+        </div>
+        <div class="rotation-system" aria-label="Workstation Rotation system flow">
+          <div class="rotation-system__node"><span>01 · INPUTS</span><strong>People, qualifications, lines, shifts, stations</strong></div>
+          <div class="rotation-system__connector" aria-hidden="true">↓</div>
+          <div class="rotation-system__node rotation-system__node--accent"><span>02 · SCHEDULE</span><strong>Constraint-based assignment engine</strong></div>
+          <div class="rotation-system__connector" aria-hidden="true">↓</div>
+          <div class="rotation-system__node"><span>03 · VERIFY</span><strong>Safety, ergonomics, training, fairness</strong></div>
+          <div class="rotation-system__connector" aria-hidden="true">↓</div>
+          <div class="rotation-system__node"><span>04 · OPERATE</span><strong>Human adjustment, reporting, floor display</strong></div>
+        </div>
+      </div>
+      <div class="container">
+        <dl class="case-facts" aria-label="Project facts">
+          <div><dt>Platform</dt><dd>VB.NET · .NET desktop</dd></div>
+          <div><dt>Data</dt><dd>SQL Server · JSON fallback</dd></div>
+          <div><dt>Domain</dt><dd>Manufacturing scheduling</dd></div>
+          <div><dt>AI role</dt><dd>Development support—not autonomous control</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="problem-title">
+      <div class="container case-two-column">
+        <div class="case-section-title">
+          <p class="eyebrow">The operational problem</p>
+          <h2 id="problem-title">A valid schedule had to respect much more than availability.</h2>
+        </div>
+        <div class="case-prose">
+          <p>Manufacturing supervisors needed to assign team members across workstations and portions of a shift while accounting for training, capacity, locked assignments, station difficulty, ergonomic exposure, and rules about which tasks could safely follow one another.</p>
+          <p>The software combined automated generation with human control. It could produce a schedule, identify positions it could not safely fill, validate manual drag-and-drop changes, preserve fixed assignments, and support printed or floor-facing schedule displays.</p>
+          <p>The design separated interface, business rules, and data access. SQL Server supported the operational environment, while a JSON backend provided a secondary path for development, fallback, and controlled testing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="engine-title">
+      <div class="container">
+        <div class="case-section-title">
+          <p class="eyebrow">The decision engine</p>
+          <h2 id="engine-title">Rules were explicit, reviewable, and separate from the interface.</h2>
+        </div>
+        <div class="challenge-grid">
+          <article><h3>Qualifications first</h3><p>Assignments had to respect whether a person was fully, partially, or not trained for a workstation. An apparently open position was not necessarily a valid assignment.</p></article>
+          <article><h3>Ergonomic sequencing</h3><p>Rules could prevent repeated exposure to the same body area, consecutive difficult stations, or restricted station combinations within a shift or day.</p></article>
+          <article><h3>Partial answers were honest</h3><p>When every requirement could not be satisfied, the system identified unfilled work rather than manufacturing a false sense of completion.</p></article>
+          <article><h3>People retained control</h3><p>Supervisors could lock assignments, adjust schedules, and receive immediate validation feedback. Automation supported operational judgment rather than replacing it.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai-role" class="section" aria-labelledby="ai-title">
+      <div class="container">
+        <div class="section-heading case-heading">
+          <div><p class="eyebrow">My first serious AI collaboration</p><h2 id="ai-title">AI expanded what I could examine. I decided what the system became.</h2></div>
+          <p class="section-heading__copy">I already understood the factory context, the users, and the scheduling rules. AI helped me interrogate the implementation more deeply and move through analysis and refactoring faster.</p>
+        </div>
+        <div class="ownership-grid">
+          <article class="ownership-card ownership-card--human">
+            <p class="ownership-card__label">My responsibility</p>
+            <h3>Operational truth, architecture, and acceptance</h3>
+            <ul>
+              <li>Translated factory practices and constraints into software behaviour</li>
+              <li>Determined which rules were mandatory, configurable, or advisory</li>
+              <li>Selected the desktop, database, reporting, and fallback architecture</li>
+              <li>Evaluated AI recommendations against the existing application and real workflow</li>
+              <li>Chose which changes to implement, defer, simplify, or reject</li>
+              <li>Retained responsibility for testing, supportability, and operational consequences</li>
+            </ul>
+          </article>
+          <article class="ownership-card ownership-card--ai">
+            <p class="ownership-card__label">AI contribution</p>
+            <h3>Review, analysis, proposals, and implementation support</h3>
+            <ul>
+              <li>Reviewed a large, established codebase and surfaced maintainability risks</li>
+              <li>Analyzed memory management, validation duplication, and architecture boundaries</li>
+              <li>Proposed modular validator and utility patterns</li>
+              <li>Helped document the system, user flows, constraints, and operational dependencies</li>
+              <li>Assisted with focused refactoring and correction work</li>
+              <li>Generated ideas that were archived when they had not been validated or adopted</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="evidence-title">
+      <div class="container case-two-column">
+        <div class="case-section-title">
+          <p class="eyebrow">Evidence, not mythology</p>
+          <h2 id="evidence-title">The repository shows both useful AI work and the need for governance.</h2>
+        </div>
+        <div class="case-prose">
+          <p>Early AI-assisted reviews led to concrete improvements: shared UI constants replaced scattered values, common validation logic was centralized, timer disposal was corrected, and duplicated code was reduced. The constraint architecture also evolved toward dedicated validators with clearer responsibilities.</p>
+          <p>Just as importantly, the repository explicitly separates AI-generated advisory material from canonical requirements. Proposals and reviews remain historical evidence unless they are revalidated against the current code and accepted into the project.</p>
+          <p>That distinction became foundational to how I work today: an AI response can be useful, detailed, and convincing without becoming a decision. Authority comes from the project’s purpose, verified evidence, and accountable human judgment.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="not-ai-title">
+      <div class="container case-failure">
+        <div>
+          <p class="eyebrow">An important distinction</p>
+          <h2 id="not-ai-title">The scheduler was not an LLM making factory assignments.</h2>
+        </div>
+        <div>
+          <p>Its production decisions came from explicit qualifications, constraints, scoring, validation, and human adjustment. AI was used to help develop and improve the software—not to improvise safety-sensitive operational rules at runtime.</p>
+          <blockquote>This project taught me the difference between using AI inside engineering and surrendering engineering decisions to AI.</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="evolution-title">
+      <div class="container case-closing">
+        <p class="eyebrow">The progression</p>
+        <h2 id="evolution-title">One AI reviewer became a directed, multi-agent development system.</h2>
+        <p>Workstation Rotation was where I began learning how to frame work for AI, inspect its reasoning, preserve useful evidence, and reject unverified conclusions. Later projects expanded that practice across architecture, implementation, testing, debugging, accessibility, documentation, and release—while keeping the complete decision-making paradigm human-owned.</p>
+        <p>The workplace code and operational data remain private. This case study describes the engineering approach without publishing proprietary source, internal configurations, or employee information.</p>
+        <div class="button-row button-row--center">
+          <a class="button button--primary" href="inner-thought.html">Continue to Inner Thought</a>
+          <a class="button button--secondary" href="../highlights/success-stories.html">More factory projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared footer is loaded by footer-include.js -->
+  <script src="../../js/header-include.js?v=1.3.2" defer></script>
+  <script src="../../js/footer-include.js?v=1.3.2" defer></script>
+  <script src="../../js/script.js?v=1.3.2" defer></script>
+</body>
+</html>

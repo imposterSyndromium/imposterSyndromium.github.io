@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How Robin O'Brien directed AI agents to help build, test, and ship Inner Thought, a private-first native iOS capture app.">
+  <title>Inner Thought Case Study — Robin O'Brien</title>
+  <link rel="stylesheet" href="../../css/styles.css?v=1.5.0">
+  <link rel="icon" type="image/png" href="/images/favicon.png?v=1.3.2">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png?v=1.3.2">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Robin O’Brien">
+  <meta property="og:title" content="Inner Thought — An AI-first iOS case study">
+  <meta property="og:description" content="A candid account of directing AI agents through product definition, architecture, implementation, testing, correction, and App Store release.">
+  <meta property="og:url" content="https://robinobrien.me/pages/case-studies/inner-thought.html">
+  <meta property="og:image" content="https://robinobrien.me/images/apps/inner-thought.png?v=1.4.0">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <!-- Shared navigation is loaded by header-include.js -->
+
+  <main id="main-content" class="case-study">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="container case-hero__grid">
+        <div class="case-hero__copy">
+          <a class="case-back-link" href="../../index.html#work">← Selected work</a>
+          <p class="eyebrow">Case study · Native iOS · AI-first development</p>
+          <h1 id="case-title">Inner Thought: directing AI from an idea to the App Store.</h1>
+          <p class="case-hero__lede">I built Inner Thought to catch a thought before it disappears. AI agents produced much of the implementation. I remained responsible for the product, constraints, technical direction, verification, corrections, and what ultimately shipped.</p>
+          <div class="button-row">
+            <a class="button button--primary" href="https://apps.apple.com/ca/app/inner-thought/id6794169203" target="_blank" rel="noopener noreferrer">View on the App Store <span aria-hidden="true">↗</span></a>
+            <a class="button button--secondary" href="https://inner-thought.movingtruth.com" target="_blank" rel="noopener noreferrer">Visit the app site</a>
+          </div>
+        </div>
+        <div class="case-hero__visual" aria-label="Inner Thought app screens">
+          <figure class="case-device case-device--home">
+            <div class="case-device__frame"><img src="/images/case-studies/inner-thought-home.png" alt="Inner Thought home screen showing a private chronological list of saved thoughts" width="1284" height="2778"></div>
+          </figure>
+          <figure class="case-device case-device--capture">
+            <div class="case-device__frame"><img src="/images/case-studies/inner-thought-capture.png" alt="Inner Thought voice capture screen ready to record" width="1284" height="2778"></div>
+          </figure>
+        </div>
+      </div>
+      <div class="container">
+        <dl class="case-facts" aria-label="Project facts">
+          <div><dt>Shipped</dt><dd>App Store since July 2026</dd></div>
+          <div><dt>Platform</dt><dd>Native Swift and SwiftUI</dd></div>
+          <div><dt>Privacy</dt><dd>Local-first, encrypted, no account</dd></div>
+          <div><dt>Method</dt><dd>AI-assisted, human-directed</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section case-intro" aria-labelledby="problem-title">
+      <div class="container case-two-column">
+        <div>
+          <p class="eyebrow">The problem</p>
+          <h2 id="problem-title">Capture first. Organization later.</h2>
+        </div>
+        <div class="case-prose">
+          <p>Important thoughts often arrive at inconvenient moments. A conventional notes workflow asks for too much before it preserves anything: open the right screen, choose a format, enter a title, file the result.</p>
+          <p>Inner Thought reverses that order. A person can speak, dictate, type, add private media or optional location context, and return to the thought later. Stopping must preserve the capture. A transcription problem must never erase a valid recording.</p>
+          <p>That simple promise created a demanding engineering boundary across audio sessions, speech recognition, encrypted persistence, interruptions, media files, accessibility, localization, widgets, Live Activities, and App Store requirements.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="before-build-title">
+      <div class="container">
+        <div class="case-section-title">
+          <p class="eyebrow">Before the first prompt</p>
+          <h2 id="before-build-title">The first decision is whether—and how—the project should be built.</h2>
+        </div>
+        <div class="case-prose">
+          <p>I do not begin by asking an AI to generate an application. I begin by evaluating the problem: who it serves, what must be true for the result to be useful, which risks are unacceptable, what evidence will define success, and whether software is even the right response.</p>
+          <p>From there, I establish the initial architecture and operating boundaries. That includes platform and framework choices, data ownership, privacy, system integrations, failure behaviour, accessibility, testing, deployment, and the parts that require human or physical-device verification. I decide which responsibilities can be delegated to AI agents and which decisions must remain explicitly mine.</p>
+          <p>The architecture is a working hypothesis, not a commitment to defend. As the agents surface constraints—or real testing disproves an assumption—I compare the alternatives, change the design, redirect the work, and sometimes remove a sophisticated approach in favour of a simpler one that behaves reliably. The complete decision-making paradigm remains mine from initial evaluation through release.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="method-title">
+      <div class="container">
+        <div class="section-heading case-heading">
+          <div><p class="eyebrow">How the work was actually done</p><h2 id="method-title">AI wrote a great deal of code. I owned the result.</h2></div>
+          <p class="section-heading__copy">For much of the project, my primary interface was conversation with AI rather than typing syntax. My work moved upward: evaluating the problem, designing the system, assigning work, comparing competing approaches, testing reality against the design, and deciding what changed or shipped.</p>
+        </div>
+        <div class="ownership-grid">
+          <article class="ownership-card ownership-card--human">
+            <p class="ownership-card__label">My responsibility</p>
+            <h3>Direction, constraints, judgment, and release ownership</h3>
+            <ul>
+              <li>Defined the product promise and the experience worth protecting</li>
+              <li>Evaluated feasibility, risks, dependencies, and success criteria before implementation</li>
+              <li>Set privacy, accessibility, localization, and failure-state rules</li>
+              <li>Selected the initial architecture, then changed it when evidence exposed a better path</li>
+              <li>Directed different agents and models toward architecture, implementation, testing, debugging, and review</li>
+              <li>Ran builds, examined behaviour, tested on real devices, and reported failures</li>
+              <li>Rejected generated solutions that passed mechanically but failed in practice</li>
+              <li>Accepted responsibility for the App Store submission and subsequent releases</li>
+            </ul>
+          </article>
+          <article class="ownership-card ownership-card--ai">
+            <p class="ownership-card__label">AI contribution</p>
+            <h3>Implementation acceleration across the software lifecycle</h3>
+            <ul>
+              <li>Translated detailed requirements into Swift and SwiftUI implementation</li>
+              <li>Proposed service boundaries, models, tests, and recovery paths</li>
+              <li>Produced competing approaches that I could compare against the project constraints</li>
+              <li>Investigated unfamiliar APIs and existing code</li>
+              <li>Generated and revised unit tests, UI tests, documentation, and localization tooling</li>
+              <li>Analyzed build and runtime failures and proposed corrections</li>
+              <li>Reviewed code and challenged decisions through multiple agent perspectives</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="workflow-title">
+      <div class="container">
+        <div class="case-section-title"><p class="eyebrow">The operating model</p><h2 id="workflow-title">A directed loop, not one-shot generation.</h2></div>
+        <ol class="workflow-steps">
+          <li><span>01</span><div><h3>Evaluate</h3><p>Understand the real problem, intended user, constraints, risks, available evidence, and whether a new software product is the right answer.</p></div></li>
+          <li><span>02</span><div><h3>Frame the system</h3><p>Choose an initial architecture, define ownership and boundaries, and state the experience and non-negotiable constraints before asking for implementation.</p></div></li>
+          <li><span>03</span><div><h3>Decompose and direct</h3><p>Break the system into responsibilities and give specialized agents clear roles in research, architecture, implementation, testing, debugging, review, and documentation.</p></div></li>
+          <li><span>04</span><div><h3>Compare and decide</h3><p>Use different models and perspectives to expose alternatives. I resolve disagreements and choose the approach that best serves the product—not the most impressive generated answer.</p></div></li>
+          <li><span>05</span><div><h3>Challenge</h3><p>Compare generated work with the original promise. Inspect assumptions, edge cases, privacy boundaries, maintainability, and failure behaviour.</p></div></li>
+          <li><span>06</span><div><h3>Verify in reality</h3><p>Compile, run automated suites, inspect accessibility, and test on physical hardware where platform behaviour cannot be simulated honestly.</p></div></li>
+          <li><span>07</span><div><h3>Adapt, correct, and ship</h3><p>Change the architecture when evidence demands it, return failures to the loop, preserve evidence, and release only the result I am prepared to stand behind.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="origin-title">
+      <div class="container case-origin">
+        <div>
+          <p class="eyebrow">Where this practice began</p>
+          <h2 id="origin-title">Workstation Rotation was my first substantial AI-assisted software project.</h2>
+        </div>
+        <div class="case-origin__copy">
+          <p>I began with an existing manufacturing problem and a system of operational rules I understood from the factory floor. AI assisted with code analysis, architectural review, refactoring proposals, documentation, and implementation support. I still had to distinguish a useful recommendation from a plausible one, validate it against the real rules, and decide what entered the application.</p>
+          <p>That project taught me to treat AI output as material for judgment rather than authority. The disciplined, multi-agent process I now use grew from those early reviews, corrections, and architecture changes.</p>
+          <a class="text-link" href="workstation-rotation.html">Read the Workstation Rotation case study <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="engineering-title">
+      <div class="container">
+        <div class="case-section-title"><p class="eyebrow">Where the real engineering happened</p><h2 id="engineering-title">The difficult parts lived between features.</h2></div>
+        <div class="challenge-grid">
+          <article><h3>Never lose the thought</h3><p>Audio remains authoritative during capture. Speech recognition can restart, stall, revise earlier words, or fail; those states cannot invalidate the recording or silently discard text already established.</p></article>
+          <article><h3>Private by construction</h3><p>Titles, transcripts, tags, location, audio, photos, and videos are encrypted with AES-256-GCM. Key material stays in the iOS Keychain, and the app has no account, advertising, analytics, or tracking service.</p></article>
+          <article><h3>Software meets hardware</h3><p>Microphones, Bluetooth and car audio, device rotation, background transitions, widgets, and Live Activities exposed behaviours that were invisible in a clean simulator run.</p></article>
+          <article><h3>Accessibility and language from the start</h3><p>The interface was built around Dynamic Type, contrast, reduced motion, semantic controls, and a fourteen-language architecture rather than treating them as a final polish pass. Human language review continues.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="failure-title">
+      <div class="container case-failure">
+        <div>
+          <p class="eyebrow">A useful failure</p>
+          <h2 id="failure-title">The build passed. The feature still did nothing.</h2>
+        </div>
+        <div class="case-prose">
+          <p>A Lock Screen capture control compiled, registered its intent metadata, and passed the automated suite. On the physical phone, pressing it did not begin recording.</p>
+          <p>Several technically plausible repairs also passed before failing the same real-world test. I kept returning the observed behaviour to the development loop instead of treating green automation as proof. The solution ultimately moved the entry point back to a simpler, already-proven path.</p>
+          <blockquote>That episode captures my role clearly: AI could generate and reason through sophisticated implementations, but I had to decide what counted as evidence—and refuse to call the work finished when reality disagreed.</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="outcome-title">
+      <div class="container case-outcome">
+        <div class="case-outcome__copy">
+          <p class="eyebrow">Outcome and evidence</p>
+          <h2 id="outcome-title">A released product, followed by continuing correction.</h2>
+          <p>Inner Thought 1.0 reached App Store distribution in July 2026. Later releases added private sharing, hands-free capture, audio-route repairs, a real MapKit location preview, a new icon, and adaptive accessibility corrections.</p>
+          <p>The repository contains automated unit and UI suites, release records, privacy declarations, accessibility and localization matrices, App Store materials, and the history of corrections made after simulator and physical-device testing.</p>
+          <p>The work is not presented as finished forever. Device-specific capture paths, broader assistive-technology verification, and human language review continue as the product evolves.</p>
+        </div>
+        <figure class="case-outcome__visual case-device case-device--detail">
+          <div class="case-device__frame"><img src="/images/case-studies/inner-thought-detail.png" alt="Inner Thought detail screen showing a saved transcript, tags, and optional location" width="1284" height="2778" loading="lazy"></div>
+          <figcaption>A real App Store capture: transcript, tags, and optional location remain together in one private thought.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="lesson-title">
+      <div class="container case-closing">
+        <p class="eyebrow">What this demonstrates</p>
+        <h2 id="lesson-title">I do not use AI as autocomplete. I direct it as a software-development workforce.</h2>
+        <p>I bring the complete decision-making system: evaluating the opportunity before work begins, defining what success means, selecting and revising the architecture, deciding how agents and models are used, resolving competing recommendations, verifying the result, and accepting accountability for what ships. AI gives me extraordinary implementation and analytical leverage. It does not set the purpose, own the judgment, or make the final decision.</p>
+        <p>The value is not pretending I typed every line. It is being able to move from an uncertain human need to a working, supportable product; to change direction when the evidence changes; and to know when a plausible AI-generated answer is not yet a responsible one.</p>
+        <div class="button-row button-row--center">
+          <a class="button button--primary" href="mailto:robin@robinobrien.me?subject=Inner%20Thought%20case%20study">Discuss the work</a>
+          <a class="button button--secondary" href="../../pages/apps.html">Explore more apps</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared footer is loaded by footer-include.js -->
+  <script src="../../js/header-include.js?v=1.3.2" defer></script>
+  <script src="../../js/footer-include.js?v=1.3.2" defer></script>
+  <script src="../../js/script.js?v=1.3.2" defer></script>
+</body>
+</html>
